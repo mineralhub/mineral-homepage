@@ -660,6 +660,7 @@ header {
     right: 0;
     top: 100px;
     overflow: hidden;
+    z-index: 7;
 
     #particles-js {
       transform: rotate(-20deg);
@@ -1466,6 +1467,19 @@ footer {
             }
           }
         }
+      }
+    }
+  }
+
+  .main {
+
+    .particleWrap {
+      width: 100%;
+      right: 0;
+      top: 0px;
+
+      #particles-js {
+        left: 50%;
       }
     }
   }

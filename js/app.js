@@ -1,10 +1,18 @@
+var particleNum = 120;
+
+if(window.innerWidth > 1024) { // PC 체크
+  particleNum = 120;
+} else if(window.innerWidth <= 1024) { // Mobile 체크
+  particleNum = 80;
+}
+
 particlesJS("particles-js",
     {
         "particles":
             {
                 "number":
                     {
-                        "value": 120, "density":
+                        "value": particleNum, "density":
                             {"enable": true, "value_area": 1000}
                     },
                 "color": {"value": "#ffffff"},
