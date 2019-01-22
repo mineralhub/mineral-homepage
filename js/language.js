@@ -110,40 +110,38 @@ var en = {
   sec1_title: "What is Mineral Hub",
   sec1_tab1_menu: "Blockchain Service Platform",
   sec1_tab1_info:
-      "Mineral Hub is service platform for company willing to have " +
-      "Blockchain business to build up the Blockchain based service fast. " +
-      "Service can be modified as Private or Public Blockchain with user's will.",
+      "Mineral Hub is service platform for company to build up the fast Blockchain system. " +
+      "Service can be modified as Private or Public Blockchain at user's will. ",
   sec1_tab2_menu: "DPoS Consensus Protocol",
   sec1_tab2_info:
-      "DPoS(Delegated Proof-of-Stake) is the Blockchain based on consensus protocol proven to have fast process speed. " +
-      "User get to choose the number of node, and run the Consortium blockchain optionally.",
+      "DPoS(Delegated Proof-of-Stake) is the Blockchain based on consensus protocol which has a fast process speed. " +
+      "User gets to choose the number of node, and run the Consortium blockchain optionally.",
   sec1_tab3_menu: "Sidechain Technology",
   sec1_tab3_info:
-      "Independent Mainnet applied Sidechain disperse the risk towards security and speed. " +
+      "Independent Mainnet connected with Sidechain disperse the risk of security and its' speed. " +
       "Also if user wants, building up a independent blockchain is available.",
   sec1_tab4_menu: "Technical Support",
   sec1_tab4_info:
-      "Mineral Hub is constructed with C++/C# language which makes developers to utilize with confort. " +
+      "Mineral Hub is constructed with C++/C# language which makes developers to utilize very easily. " +
       "Through the SDK support, service development is simple. If there is any difficulty in development, " +
-      "technical support can be provided anytime through the license issue.",
+      "technical support can be provided anytime through the license registration.",
   sec1_mTab1_menu: "Blockchain Service Platform",
   sec1_mTab1_info:
-      "Mineral Hub is service platform for company willing to have " +
-      "Blockchain business to build up the Blockchain based service fast. " +
-      "Service can be modified as Private or Public Blockchain with user's will.",
+      "Mineral Hub is service platform for company to build up the fast Blockchain system. " +
+      "Service can be modified as Private or Public Blockchain at user's will. ",
   sec1_mTab2_menu: "DPoS Consensus Protocol",
   sec1_mTab2_info:
-      "DPoS(Delegated Proof-of-Stake) is the Blockchain based on consensus protocol proven to have fast process speed. " +
-      "User get to choose the number of node, and run the Consortium blockchain optionally.",
+      "DPoS(Delegated Proof-of-Stake) is the Blockchain based on consensus protocol which has a fast process speed. " +
+      "User gets to choose the number of node, and run the Consortium blockchain optionally.",
   sec1_mTab3_menu: "Sidechain Technology",
   sec1_mTab3_info:
-      "Independent Mainnet applied Sidechain disperse the risk towards security and speed. " +
+      "Independent Mainnet connected with Sidechain disperse the risk of security and its' speed. " +
       "Also if user wants, building up a independent blockchain is available.",
   sec1_mTab4_menu: "Technical Support",
   sec1_mTab4_info:
-      "Mineral Hub is constructed with C++/C# language which makes developers to utilize with confort. " +
+      "Mineral Hub is constructed with C++/C# language which makes developers to utilize very easily. " +
       "Through the SDK support, service development is simple. If there is any difficulty in development, " +
-      "technical support can be provided anytime through the license issue.",
+      "technical support can be provided anytime through the license registration.",
 
   sec2_title: "Three separate Mainnets of Mineral Hub",
   sec2_card1_front_title: "Mineral Hub",
