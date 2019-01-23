@@ -102,6 +102,9 @@ header {
   width: 100%;
   opacity: 1;
   transition-duration: 0.3s;
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
 
 
   .headerTop {
@@ -445,6 +448,8 @@ header {
 
   .scrolling {
     background: rgba(255, 255, 255, 1);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
     .leftBtn {
@@ -485,6 +490,8 @@ header {
       width: 55%;
       height: 100%;
       background-color: #ffffff;
+      -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
       .mobileNav {
@@ -900,6 +907,8 @@ section {
             height: 100%;
             backface-visibility: hidden;
             background-color: #fff;
+            -moz-box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
             box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
             display: -ms-flexbox;
             border-radius: 10px;

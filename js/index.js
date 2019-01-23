@@ -438,6 +438,9 @@ function transHeader() {
 
       if ($(window).scrollTop() < 150) {
           $("header").css("background", "inherit");
+          $("header").css("-moz-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
+          $("header").css("-webkit-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
+          $("header").css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
           $("header .headerBottom .nav .logo > a").css("background-image", "url('image/mainLogo.png')");
           $("header .headerBottom .nav .menu > li > a").css("color", "#ffffff");
           $("header .headerTop .snsNav .country > h5 > span").css("color", "#ffffff");
@@ -451,6 +454,9 @@ function transHeader() {
           }
       } else {
           $("header").css("background", "#ffffff");
+          $("header").css("-moz-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0.2)");
+          $("header").css("-webkit-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0.2)");
+          $("header").css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0.2)");
           $("header .headerBottom .nav .logo > a").css("background-image", "url('image/mainLogo_scroll.png')");
           $("header .headerBottom .nav .menu > li > a").css("color", "#000000");
           $("header .headerTop .snsNav .country > h5 > span").css("color", "#000000");
