@@ -199,7 +199,16 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top - $("header").height(); // 커스텀 custum
+
+			// ---------- 커스텀: PC, mobile header 크기 뺀 값 만큼 스크롤
+			var headerHeight;
+      if(window.innerWidth > 1024) { // PC 체크
+				headerHeight = $("header").height();
+			} else if(window.innerWidth <= 1024) { // 모바일 체크
+				headerHeight = $(".mobileHeader").height();
+			}
+
+			var offset = $(target).offset().top - headerHeight; // 커스텀 custum
 
 			$('html, body').animate({
 				scrollTop: offset
