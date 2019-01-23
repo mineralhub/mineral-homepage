@@ -20,14 +20,21 @@ $(document).ready(function () {
 
     cardFlip(); // PC, Mobile 에 따라 각기 다른 이벤트로 Card Flip
 
-    whatKindOfBrowser();
+    // Card Flip 지원하는 최신 엔진이냐 아니냐를 체크하고 Card Flip 연출할지
+    // 노멀하게 연출할지 체크
+    if( whatKindOfBrowser() == "chrome" ||
+        whatKindOfBrowser() == "firefox" ||
+        whatKindOfBrowser() == "opera") {
+      console.log("크롬 or FF or 오페라 입니다.");
+    } else {
+      console.log("Card Flip 지원하지 않는 브라우저 입니다.");
+    }
 
 
 
     // 모바일이면 처음 들어왔을 때의 브라우저 높이로 main 높이 셋팅
     // 모바일 브라우저의 innerHeight 은 유저의 스크롤에 따라서 계속 변함.
     if(window.innerWidth <= 767) { // 모바일 체크
-      alert(window.innerHeight);
       $(".main").css("height", window.innerHeight);
     }
 
@@ -230,8 +237,9 @@ $(window).on("load", function() { // 모든 이미지 리소스 까지 다 로�
     loadDiv.style.opacity = loadOpacityStr;
 
         if(loadDiv.style.opacity < 0) {
-        loadDiv.remove();
-        clearInterval(loadInterval);
+          loadDiv.style.display = "none";
+          loadDiv.remove();
+          clearInterval(loadInterval);
         }
     }
 
@@ -542,15 +550,11 @@ function cardFlip(e) {
     // PC 는 마우스오버, 마우스리브 이벤트
     $(".flipCard").on("mouseover", function() {
       if(window.innerWidth > 1024) { // PC 체크
-        $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(180deg)');
-        $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(180deg)');
         $(this).children(".flipCardInner").css('transform', 'rotateY(180deg)');
       }
     });
     $(".flipCard").on("mouseleave", function() {
       if(window.innerWidth > 1024) { // PC 체크
-        $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(0deg)');
-        $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(0deg)');
         $(this).children(".flipCardInner").css('transform', 'rotateY(0deg)');
       }
     });
@@ -559,18 +563,15 @@ function cardFlip(e) {
     $(".flipCard").on("click", function() {
       if(window.innerWidth <= 1024) { // 모바일 체크
         if($(this).children(".flipCardInner").hasClass("flipped")) {
-          $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(0deg)').removeClass("flipped");
-          $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(0deg)').removeClass("flipped");
           $(this).children(".flipCardInner").css('transform', 'rotateY(0deg)').removeClass("flipped");
         }
         else {
-          $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(180deg)').addClass("flipped");
-          $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(180deg)').addClass("flipped");
           $(this).children(".flipCardInner").css('transform', 'rotateY(180deg)').addClass("flipped");
         }
       }
     });
 }
+
 
 
 var Browser = {
@@ -592,24 +593,24 @@ Browser = {
 
 function whatKindOfBrowser() {
 	if (Browser.chrome) {
-		alert("It is chrome browser");
+		return "chrome";
 	} else if (Browser.ie6) {
-		alert("It is ie6 browser");
+		return "ie6";
 	} else if (Browser.ie7) {
-		alert("It is ie7 browser");
+		return "ie7";
 	} else if (Browser.ie8) {
-		alert("It is ie8 browser");
+		return "ie8";
 	} else if (Browser.opera) {
-		alert("It is opera browser");
+		return "opera";
 	} else if (Browser.safari) {
-		alert("It is safari browser");
+		return "safari";
 	} else if (Browser.safari3) {
-		alert("It is safari3 browser");
+		return "safari";
 	} else if (Browser.mac) {
-		alert("It is mac browser");
+		return "mac";
 	} else if (Browser.firefox) {
-		alert("It is firefox browser");
+		return "firefox";
 	} else {
-		alert("It is maybe ie");
+		return "maybeIe";
 	}
 }
