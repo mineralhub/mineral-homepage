@@ -194,6 +194,9 @@ header {
         .sns6 {
           background: url("../image/headerSns6.png") no-repeat;
         }
+        .sns7 {
+          background: url("../image/headerSns7.png") no-repeat;
+        }
 
         &::after {
           display: block;
@@ -540,13 +543,13 @@ header {
           .sns1 {
 
             > a {
-              background: url("../image/headerSns1_global.png") no-repeat;
+              background: url("../image/headerSns1_korea.png") no-repeat;
             }
           }
           .sns2 {
 
             > a {
-              background: url("../image/headerSns1_korea.png") no-repeat;
+              background: url("../image/headerSns1_global.png") no-repeat;
             }
           }
           .sns3 {
@@ -577,6 +580,12 @@ header {
 
             > a {
               background: url("../image/headerSns6_scroll.png") no-repeat;
+            }
+          }
+          .sns8 {
+
+            > a {
+              background: url("../image/headerSns7_scroll.png") no-repeat;
             }
           }
 

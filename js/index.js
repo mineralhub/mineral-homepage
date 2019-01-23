@@ -442,7 +442,7 @@ function transHeader() {
           $("header .headerBottom .nav .menu > li > a").css("color", "#ffffff");
           $("header .headerTop .snsNav .country > h5 > span").css("color", "#ffffff");
 
-          for(i = 1 ; i < 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
+          for(i = 1 ; i <= 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
             $("header .headerTop .snsNav .menu > .sns" + i).css("background-image", "url('image/headerSns" + i + ".png')");
 
 
@@ -455,7 +455,7 @@ function transHeader() {
           $("header .headerBottom .nav .menu > li > a").css("color", "#000000");
           $("header .headerTop .snsNav .country > h5 > span").css("color", "#000000");
 
-          for(i = 1 ; i < 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
+          for(i = 1 ; i <= 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
             $("header .headerTop .snsNav .menu > .sns" + i).css("background-image", "url('image/headerSns" + i + "_scroll.png')");
           }
 
