@@ -1384,8 +1384,9 @@ footer {
   .wrap {
 
     .logo {
-      width: max-content;
       margin: 0 auto 40px auto;
+      display: flex;
+      justify-content: center;
 
       > a {
         display: block;
