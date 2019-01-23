@@ -199,7 +199,7 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top;
+			var offset = $(target).offset().top - $("header").height(); // 커스텀 custum
 
 			$('html, body').animate({
 				scrollTop: offset
