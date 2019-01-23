@@ -20,11 +20,16 @@ $(document).ready(function () {
 
     cardFlip(); // PC, Mobile 에 따라 각기 다른 이벤트로 Card Flip
 
+    whatKindOfBrowser();
 
 
 
-
-
+    // 모바일이면 처음 들어왔을 때의 브라우저 높이로 main 높이 셋팅
+    // 모바일 브라우저의 innerHeight 은 유저의 스크롤에 따라서 계속 변함.
+    if(window.innerWidth <= 767) { // 모바일 체크
+      alert(window.innerHeight);
+      $(".main").css("height", window.innerHeight);
+    }
 
 
 
@@ -565,4 +570,46 @@ function cardFlip(e) {
         }
       }
     });
+}
+
+
+var Browser = {
+    a : navigator.userAgent.toLowerCase()
+};
+
+Browser = {
+    ie : /*@cc_on true || @*/ false,
+    ie6 : Browser.a.indexOf('msie 6') != -1,
+    ie7 : Browser.a.indexOf('msie 7') != -1,
+    ie8 : Browser.a.indexOf('msie 8') != -1,
+    opera : !!window.opera,
+    safari : Browser.a.indexOf('safari') != -1,
+    safari3 : Browser.a.indexOf('applewebkit/5') != -1,
+    mac : Browser.a.indexOf('mac') != -1,
+    chrome : Browser.a.indexOf('chrome') != -1,
+    firefox : Browser.a.indexOf('firefox') != -1
+};
+
+function whatKindOfBrowser() {
+	if (Browser.chrome) {
+		alert("It is chrome browser");
+	} else if (Browser.ie6) {
+		alert("It is ie6 browser");
+	} else if (Browser.ie7) {
+		alert("It is ie7 browser");
+	} else if (Browser.ie8) {
+		alert("It is ie8 browser");
+	} else if (Browser.opera) {
+		alert("It is opera browser");
+	} else if (Browser.safari) {
+		alert("It is safari browser");
+	} else if (Browser.safari3) {
+		alert("It is safari3 browser");
+	} else if (Browser.mac) {
+		alert("It is mac browser");
+	} else if (Browser.firefox) {
+		alert("It is firefox browser");
+	} else {
+		alert("It is maybe ie");
+	}
 }
