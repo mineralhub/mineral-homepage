@@ -537,11 +537,15 @@ function cardFlip(e) {
     // PC 는 마우스오버, 마우스리브 이벤트
     $(".flipCard").on("mouseover", function() {
       if(window.innerWidth > 1024) { // PC 체크
+        $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(180deg)');
+        $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(180deg)');
         $(this).children(".flipCardInner").css('transform', 'rotateY(180deg)');
       }
     });
     $(".flipCard").on("mouseleave", function() {
       if(window.innerWidth > 1024) { // PC 체크
+        $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(0deg)');
+        $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(0deg)');
         $(this).children(".flipCardInner").css('transform', 'rotateY(0deg)');
       }
     });
@@ -549,8 +553,16 @@ function cardFlip(e) {
     // 모바일은 클릭 이벤트
     $(".flipCard").on("click", function() {
       if(window.innerWidth <= 1024) { // 모바일 체크
-        if($(this).children(".flipCardInner").hasClass("flipped")) $(this).children(".flipCardInner").css('transform', 'rotateY(0deg)').removeClass("flipped");
-        else $(this).children(".flipCardInner").css('transform', 'rotateY(180deg)').addClass("flipped");
+        if($(this).children(".flipCardInner").hasClass("flipped")) {
+          $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(0deg)').removeClass("flipped");
+          $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(0deg)').removeClass("flipped");
+          $(this).children(".flipCardInner").css('transform', 'rotateY(0deg)').removeClass("flipped");
+        }
+        else {
+          $(this).children(".flipCardInner").css('-moz-transform', 'rotateY(180deg)').addClass("flipped");
+          $(this).children(".flipCardInner").css('-webkit-transform', 'rotateY(180deg)').addClass("flipped");
+          $(this).children(".flipCardInner").css('transform', 'rotateY(180deg)').addClass("flipped");
+        }
       }
     });
 }

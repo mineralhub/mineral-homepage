@@ -251,6 +251,8 @@ header {
             height: 10px;
             display: none;
             background-color: #dfdfdf;
+            -moz-transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
             transition-duration: 0.1s;
           }
@@ -679,6 +681,8 @@ header {
     z-index: 7;
 
     #particles-js {
+      -moz-transform: rotate(-20deg);
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
       position: absolute;
       width: 90%;
@@ -974,6 +978,8 @@ section {
 
           .flipCardBack {
             color: white;
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
             background-color: #4d60ed;
 
@@ -1016,6 +1022,8 @@ section {
         }
 
         // &:hover .flipCardInner {
+        //   -moz-transform: rotateY(180deg);
+        //   -webkit-transform: rotateY(180deg);
         //   transform: rotateY(180deg);
         // }
       }
@@ -1280,6 +1288,7 @@ section {
       -webkit-transition: .3s opacity;
       -o-transition: .3s opacity;
       transition: .3s opacity;
+      -moz-transform: translate3d(0,0,0);
       -webkit-transform: translate3d(0,0,0);
       transform: translate3d(0,0,0);
       z-index: 10;

@@ -72,7 +72,7 @@ var ko = {
       "컨소시엄 블록체인<br>" +
       "노드 개수 설정<br>" +
       "독립 블록체인 가능",
-  sec2_goGitHub: "Git Hub 바로가기 →",
+  sec2_goGitHub: "GitHub 바로가기 →",
   sec3_title: "Roadmap",
   sec3_2018_1: "2018. 11 GitHub Testnet Release",
   sec3_2019_1: "Tron DApp",
