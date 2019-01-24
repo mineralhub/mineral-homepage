@@ -1,5 +1,3 @@
-# Mineral Hub homepage
-
 What is Mineral Hub homepage?
 --------------------
 
