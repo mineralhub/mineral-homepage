@@ -850,37 +850,44 @@ section {
     }
 
     #mobileTabs {
-      display: block; // 기본적으로는 비활성화. 모바일에서는 활성화 됨
-      height: 0;
+      height: 0; // 기본적으로는 비활성화. 모바일에서는 활성화 됨
       overflow: hidden;
 
-      > h3 {
-        padding: 10px 10px;
-        color: #ffffff;
-        font-size: 14px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-        .ui-accordion-header-icon {
-          width: 10px;
-          height: 10px;
-          background-color: #ffffff;
-          color: #ffffff;
-        }
-      }
-
-      > .ui-state-active { // 활성화 된 tab
-        background: rgba(0, 0, 0, 0.2);
-      }
-
       > div {
-        padding: 20px 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         word-break:break-all;
 
-        > p {
-          padding: 0 0 20px 0;
-          color: #aaa;
-          word-break:break-all;
+        > h3 {
+          padding: 10px 10px;
+          color: #ffffff;
+          font-size: 14px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          transition-duration: 0.5s;
+        }
+
+        > div {
+          height: 0;
+          overflow: hidden;
+          transition-duration: 0.5s;
+
+          > p {
+            padding: 20px;
+            color: #aaa;
+            word-break:break-all;
+          }
+        }
+      }
+
+      > .activeTab {
+
+        > h3 {
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        > div {
+
+          > p {
+          }
         }
       }
     }
@@ -1874,7 +1881,6 @@ footer {
       }
 
       #mobileTabs {
-        display: block;
         height: auto;
       }
     }

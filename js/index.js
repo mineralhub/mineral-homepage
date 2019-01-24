@@ -29,7 +29,7 @@ $(document).ready(function () {
         event: "mouseover"
     });
 
-    $("#mobileTabs").accordion();
+    mobileTab();
 
     AOS.init(); // [aos.css] 스크롤 시 나타나는 애니메이션 셋팅
 
@@ -614,4 +614,32 @@ function whatKindOfBrowser() {
 	} else {
 		return "maybeIe";
 	}
+}
+
+
+function mobileTab() {
+
+  var maxHeight = 0;
+
+  $('[class^=mobileTab]').each(function () { // 해당 클래스가 검색되면 반복
+    var temp = $(this).children("div").children("p").height();
+    if(maxHeight < temp) maxHeight = temp;
+  });
+
+  $(".activeTab").children("div").css("height", maxHeight + 60 + "px");
+
+
+  $("#mobileTabs > div").on("click", function() {
+
+    $('[class^=mobileTab]').each(function () { // 해당 클래스가 검색되면 반복
+      var temp = $(this).children("div").children("p").height();
+      if(maxHeight < temp) maxHeight = temp;
+    });
+
+
+    $('.activeTab').each(function () { // 해당 클래스가 검색되면 반복
+      $(this).removeClass("activeTab").children("div").css("height", "0px");
+    });
+    $(this).addClass("activeTab").children("div").css("height", maxHeight + 50 + "px");
+  });
 }
