@@ -1,6 +1,19 @@
 $(document).ready(function () {
 
-    AOS.init(); // [aos.css] 스크롤 시 나타나는 애니메이션 셋팅
+
+    // Card Flip 지원하는 최신 엔진이냐 아니냐를 체크하고 Card Flip 연출할지
+    // 노멀하게 연출할지 체크
+    if( whatKindOfBrowser() == "chrome" ||
+        whatKindOfBrowser() == "firefox" ||
+        whatKindOfBrowser() == "opera") {
+      console.log("크롬 or FF or 오페라 입니다.");
+      $("#card").addClass("compatible");
+      cardFlip(); // PC, Mobile 에 따라 각기 다른 이벤트로 Card Flip
+    } else {
+      console.log("Card Flip 지원하지 않는 브라우저 입니다.");
+      $("#card").addClass("notCompatible");
+    }
+
 
     transLanguage(); // 언어 변경
 
@@ -18,19 +31,7 @@ $(document).ready(function () {
 
     $("#mobileTabs").accordion();
 
-    cardFlip(); // PC, Mobile 에 따라 각기 다른 이벤트로 Card Flip
-
-    // Card Flip 지원하는 최신 엔진이냐 아니냐를 체크하고 Card Flip 연출할지
-    // 노멀하게 연출할지 체크
-    if( whatKindOfBrowser() == "chrome" ||
-        whatKindOfBrowser() == "firefox" ||
-        whatKindOfBrowser() == "opera") {
-      console.log("크롬 or FF or 오페라 입니다.");
-    } else {
-      console.log("Card Flip 지원하지 않는 브라우저 입니다.");
-    }
-
-
+    AOS.init(); // [aos.css] 스크롤 시 나타나는 애니메이션 셋팅
 
     // 모바일이면 처음 들어왔을 때의 브라우저 높이로 main 높이 셋팅
     // 모바일 브라우저의 innerHeight 은 유저의 스크롤에 따라서 계속 변함.
