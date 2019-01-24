@@ -25,7 +25,7 @@ var ko = {
       " 또한 이를 통해 사용자가 원한다면 하나의 독립적인 블록체인으로도 구성할 수도 있습니다.",
   sec1_tab4_menu: "기술 지원",
   sec1_tab4_info:
-      "Mineral Hub 는 C++/C# 언어로 구성되어 기존의 개발자들이 사용하기 편리합니다. " +
+      "Mineral Hub 는 C# 언어로 구성되어 기존의 개발자들이 사용하기 편리합니다. " +
       "SDK 제공을 통해 서비스 개발에도 용이합니다. 개발에 어려움이 있다면 라이선스 발급을 통해 " +
       "언제든지 기술 지원을 받을 수 있습니다.",
   sec1_mTab1_menu: "블록체인 서비스 플랫폼",
@@ -43,7 +43,7 @@ var ko = {
       " 또한 이를 통해 사용자가 원한다면 하나의 독립적인 블록체인으로도 구성할 수도 있습니다.",
   sec1_mTab4_menu: "기술 지원",
   sec1_mTab4_info:
-      "Mineral Hub 는 C++/C# 언어로 구성되어 기존의 개발자들이 사용하기 편리합니다. " +
+      "Mineral Hub 는 C# 언어로 구성되어 기존의 개발자들이 사용하기 편리합니다. " +
       "SDK 제공을 통해 서비스 개발에도 용이합니다. 개발에 어려움이 있다면 라이선스 발급을 통해 " +
       "언제든지 기술 지원을 받을 수 있습니다.",
   sec2_title: "Mineral Hub 의 독립된 메인넷 3종",
@@ -122,7 +122,7 @@ var en = {
       "Also if user wants, building up a independent blockchain is available.",
   sec1_tab4_menu: "Technical Support",
   sec1_tab4_info:
-      "Mineral Hub is constructed with C++/C# language which makes developers to utilize very easily. " +
+      "Mineral Hub is constructed with C# language which makes developers to utilize very easily. " +
       "Through the SDK support, service development is simple. If there is any difficulty in development, " +
       "technical support can be provided anytime through the license registration.",
   sec1_mTab1_menu: "Blockchain Service Platform",
@@ -139,7 +139,7 @@ var en = {
       "Also if user wants, building up a independent blockchain is available.",
   sec1_mTab4_menu: "Technical Support",
   sec1_mTab4_info:
-      "Mineral Hub is constructed with C++/C# language which makes developers to utilize very easily. " +
+      "Mineral Hub is constructed with C# language which makes developers to utilize very easily. " +
       "Through the SDK support, service development is simple. If there is any difficulty in development, " +
       "technical support can be provided anytime through the license registration.",
 
@@ -220,7 +220,7 @@ var zh = {
       "还有如使用者愿意的话可以做一个独立的区块链方式",
   sec1_tab4_menu: "技术支援",
   sec1_tab4_info:
-      "Mineral Hub的语言是C++/C#来做的，所以对开发者来会很方便的用。" +
+      "Mineral Hub的语言是C#来做的，所以对开发者来会很方便的用。" +
       "还有透过我们提供的SDK来开发也很方便。如开发有问题许可发给后随时可技术支援。",
   sec1_mTab1_menu: "区块链服务平台",
   sec1_mTab1_info:
@@ -237,7 +237,7 @@ var zh = {
       "还有如使用者愿意的话可以做一个独立的区块链方式",
   sec1_mTab4_menu: "技术支援",
   sec1_mTab4_info:
-      "Mineral Hub的语言是C++/C#来做的，所以对开发者来会很方便的用。" +
+      "Mineral Hub的语言是C#来做的，所以对开发者来会很方便的用。" +
       "还有透过我们提供的SDK来开发也很方便。如开发有问题许可发给后随时可技术支援。",
   sec2_title: "Mineral Hub的独立的主网3种",
   sec2_card1_front_title: "Mineral Hub",

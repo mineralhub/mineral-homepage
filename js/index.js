@@ -238,7 +238,6 @@ $(window).on("load", function() { // 모든 이미지 리소스 까지 다 로�
 
         if(loadDiv.style.opacity < 0) {
           loadDiv.style.display = "none";
-          loadDiv.remove();
           clearInterval(loadInterval);
         }
     }
@@ -246,6 +245,7 @@ $(window).on("load", function() { // 모든 이미지 리소스 까지 다 로�
 
     loadInterval = setInterval(load, 15); // 로드 암막
     // --------------------------------- 로드 암막
+
 });
 
 

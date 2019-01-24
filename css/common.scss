@@ -28,6 +28,9 @@ $defaultWidth: 1200px;
   font-size: 30px;
   color: #fff;
 }
+section, footer { // IE 선 문제
+  margin-top: -1px;
+}
 /* -------------------- 스크롤바 -------------------- */
 html::-webkit-scrollbar-track {
     background-color: #9d9d9d;
@@ -630,11 +633,9 @@ header {
   height: 100vh;
   background-color: $themeColor;
   justify-content: center;
-  background: url("../image/mainBackground.png") center top no-repeat fixed;
+  background: url("../image/mainBackground.png") center top no-repeat;
   background-color: #555;
   background-size: cover;
-  transition-duration: 0.5s;
-  transition-delay: 1s;
 
   > .wrap {
 
@@ -857,7 +858,9 @@ section {
     }
 
     #mobileTabs {
-      display: none; // 기본적으로는 비활성화. 모바일에서는 활성화 됨
+      display: block; // 기본적으로는 비활성화. 모바일에서는 활성화 됨
+      height: 0;
+      overflow: hidden;
 
       > h3 {
         padding: 10px 10px;
@@ -1403,6 +1406,21 @@ footer {
       color: #ffffff;
       font-weight: inherit;
       opacity: 0.8;
+
+      span {
+        text-align: center;
+        line-height: 2;
+        color: #ffffff;
+        font-weight: inherit;
+      }
+
+      .pcLine {
+        display: inline;
+      }
+
+      .mobileLine {
+        display: none;
+      }
     }
 
     .copyright {
@@ -1711,6 +1729,7 @@ footer {
 
       #mobileTabs {
         display: block;
+        height: auto;
       }
     }
   }
@@ -1766,6 +1785,23 @@ footer {
         .flipCard {
           width: 280px;
           height: 400px;
+        }
+      }
+    }
+  }
+
+  footer {
+
+    .wrap {
+
+      > p {
+
+        .pcLine {
+          display: none;
+        }
+
+        .mobileLine {
+          display: inline;
         }
       }
     }
