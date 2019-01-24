@@ -9,6 +9,9 @@ $defaultWidth: 1200px;
   color: #333;
   font-family: 'NotoSansCJKtc-Medium', sans-serif;
 }
+body {
+  background-color: #171738;
+}
 #load {
   position: fixed;
   width: 100%;
@@ -44,18 +47,6 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
     background-color: #656874;
-}
-
-html {
-    scrollbar-3dLight-Color: #fff;
-    scrollbar-arrow-color: #fff;
-    scrollbar-base-color: #fff;
-    scrollbar-Face-Color: #000;
-    scrollbar-Track-Color: #fff;
-    scrollbar-Track-Color: #fff;
-    scrollbar-DarkShadow-Color: #efefef;
-    scrollbar-Highlight-Color: #efefef;
-    scrollbar-Shadow-Color: #efefef;
 }
 ul, ol, li {
   list-style: none;
@@ -103,6 +94,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: none;
   opacity: 1;
   transition-duration: 0.3s;
   -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0);
@@ -633,7 +625,7 @@ header {
   height: 100vh;
   background-color: $themeColor;
   justify-content: center;
-  background: url("../image/mainBackground.png") center top no-repeat;
+  background: url("../image/mainBackground.png") center top no-repeat fixed;
   background-color: #555;
   background-size: cover;
 

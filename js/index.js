@@ -450,7 +450,7 @@ function transHeader() {
       var i = 1;
 
       if ($(window).scrollTop() < 150) {
-          $("header").css("background", "inherit");
+          $("header").css("background", "none");
           $("header").css("-moz-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
           $("header").css("-webkit-box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
           $("header").css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
