@@ -1,4 +1,7 @@
-# What is Mineral Hub homepage?
+# Mineral Hub homepage
+
+What is Mineral Hub homepage?
+--------------------
 
 Details related to Mineral Hub will be updated on Mineral Hub homepage.
 Current homepage is 1st rough version showing the basic information of Mineral Hub.
