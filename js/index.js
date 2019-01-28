@@ -319,6 +319,10 @@ function transLanguage() {
 
         $(".nowLanguage").html(nowLanguage); //  현재 언어 표시되는 부분에 현재 언어 표시
 
+        if(window.innerWidth <= 1024) { // 모바일이면 버튼 안에 공간이 부족. 텍스트 요약
+          $("#sec2_goGitHub").html($("#sec2_goGitHub").html().replace("Visit the Mineral Hub GitHub", "Visit the GitHub"));
+        }
+
         setTimeout(function() { // 바뀐 텍스트들 Fade in
             $(".tl").css("transition-duration", "0.7s");
             $(".tl").css("opacity", "1");
@@ -337,73 +341,6 @@ function transLanguage() {
     });
 }
 
-function transLanguageMobile(langValue) {
-    var nowLanguage = "KO"; // 기본 값 셋팅
-    var nowLang;
-
-    $(".tl").css("transition-duration", "0s");
-    $(".tl").css("opacity", "0"); // 일단 바뀌는 모든 텍스트들 숨김
-
-    nowLanguage = langValue;
-
-    switch (nowLanguage) {
-        case "한국어":
-            nowLang = ko;
-            break;
-        case "ENGLISH":
-            nowLang = en;
-            break;
-        case "简体中文":
-            nowLang = zh;
-            break;
-    }
-
-    // --- HTML <script/> 태그에 반복문으로 텍스트 커스텀 함수 만들어서 바로 실행하여 랜더링 ---
-    var langScript; // <script/> 태그에 넣을 함수를 문자열로 저장하는 변수
-    var langString; // 선택된 언어의 객체를 짧은 문자열로 저장
-
-    switch (nowLang) { // 선택된 언어의 객체를 짧은 문자열로 저장
-        case ko:
-            langString = 'ko';
-            break;
-        case en:
-            langString = 'en';
-            break;
-        case zh:
-            langString = 'zh';
-            break;
-    }
-
-
-    $('head title').html(nowLang.title); // 반복될 필요 없는 Title 은 위로 뺌
-    console.log(langString + nowLang.title); // 테스트용 언어 전환
-
-    $('[class^=tl]').each(function () { // 해당 클래스가 검색되면 반복
-
-        langScript = "<script>\n" +
-            "function languageRender() {\n" +
-            "$('#" + $(this).attr("id") + "').html(" + langString + "." + $(this).attr("id") + ");\n" +
-            "}\n" +
-            "</script>";
-
-        $(".langScript").html(langScript); // 위에 작성된 함수를 .langScript 에 넣기
-
-        languageRender(); // .langScript 에 넣어진 함수 실행
-        console.log(langScript); // 테스트용 한줄씩 실행
-    });
-
-    // ------------------------------------------
-    $("#sec2_goGitHub").html($("#sec2_goGitHub").html().replace("Visit the Mineral Hub GitHub", "Visit the GitHub"));
-
-    $(".nowLanguage").html(nowLanguage); //  현재 언어 표시되는 부분에 현재 언어 표시
-
-    setTimeout(function() { // 바뀐 텍스트들 Fade in
-        $(".tl").css("transition-duration", "0.7s");
-        $(".tl").css("opacity", "1");
-    }, 200);
-
-
-}
 
 function scrollNav() {
     $('.nav .menu').onePageNav({ // [jquery.nav.js] 스크롤, Nav 셋팅

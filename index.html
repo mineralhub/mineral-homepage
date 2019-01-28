@@ -80,11 +80,17 @@
         <div class="leftBtn" onclick="mobileMenu();"></div>
         <div class="logo" onclick="location.reload();"></div>
         <div class="rightBtn">
-          <select id="langBtn" onchange="transLanguageMobile(this.value);">
-            <option value="한국어">한국어</option>
-            <option value="ENGLISH">ENGLISH</option>
-            <option value="简体中文">简体中文</option>
-          </select>
+          <div class="country">
+            <h5><span class="nowLanguage"></span><span class="arrow">▼</span></h5>
+            <ul class="languageList">
+              <div class="arrow"></div>
+              <div class="list">
+                <li>한국어</li>
+                <li>ENGLISH</li>
+                <li>简体中文</li>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -221,7 +227,7 @@
                 </div>
               </div>
               <div class="flipCardBack">
-                <h5 class="tl cardTitle" id="sec2_card1_back_title">Mineral Hub 기능</h5>
+                <h5 class="cardTitle"><span class="tl" id="sec2_card1_back_title">Mineral Hub 기능</span></h5>
                 <div class="cardContents">
                   <p class="tl" id="sec2_card1_back_info">
                     DPoS 합의 프로토콜<br>
@@ -247,7 +253,7 @@
                 </div>
               </div>
               <div class="flipCardBack">
-                <h5 class="tl cardTitle" id="sec2_card2_back_title">Exchange 기능</h5>
+                <h5 class="cardTitle"><span class="tl" id="sec2_card2_back_title">Exchange 기능</span></h5>
                 <div class="cardContents">
                   <p class="tl" id="sec2_card2_back_info">
                     블록체인 별 노드참여<br>
@@ -271,7 +277,7 @@
                 </div>
               </div>
               <div class="flipCardBack">
-                <h5 class="tl cardTitle" id="sec2_card3_back_title">User Side 기능</h5>
+                <h5 class="cardTitle"><span class="tl" id="sec2_card3_back_title">User Side 기능</span></h5>
                 <div class="cardContents">
                   <p class="tl" id="sec2_card3_back_info">
                     퍼블릭 블록체인<br>
