@@ -3,7 +3,7 @@ var particleNum = 120;
 if(window.innerWidth > 1024) { // PC 체크
   particleNum = 120;
 } else if(window.innerWidth <= 1024) { // Mobile 체크
-  particleNum = 40;
+  particleNum = 60;
 }
 
 particlesJS("particles-js",
