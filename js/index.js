@@ -62,7 +62,7 @@ $(window).on("load", function() { // 모든 이미지 리소스 까지 다 로�
 
 function initLanguage() {
 
-  $.getJSON("http://ipinfo.io", function(data) {
+  $.getJSON("https://ipinfo.io", function(data) {
      var country = data.country; // 접속자 국가
      var nowLang = ko;
 
