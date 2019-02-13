@@ -4,7 +4,7 @@ What is Mineral Hub homepage?
 Details related to Mineral Hub will be updated on Mineral Hub homepage.
 Current homepage is 1st rough version showing the basic information of Mineral Hub.
 
-Whitepaper, TGE, Partnership, Event, etc will be updated as the R&D progress goes. 
+Whitepaper, TGE, Partnership, Event, etc will be updated as the R&D progress goes.
 
 Optimized Web browers
 --------------------
@@ -15,6 +15,14 @@ Optimized Web browers
  - Opera
  - Safari
  - Naver Whale
+
+
+
+Language Support
+--------------------
+ - 한국어
+ - ENGLISH
+ - 简体中文
 
 
 
