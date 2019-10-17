@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     browserCheck(); // 브라우저 체크, 알맞는 랜더링
 
     transLanguage(); // 언어 변경
@@ -86,49 +85,15 @@ function initLanguage() {
   });
 }
 
+var nowLanguage = "한국어"; // 기본 값 셋팅
+var nowLang = ko;
 function transLanguage() {
-    var nowLanguage = "한국어"; // 기본 값 셋팅
-    var nowLang;
 
     $(".nowLanguage").html(nowLanguage); // 기본 값 랜더링
-    nowLang = ko;
+    renderText(nowLanguage);
 
-    $(".languageList .list li").on("click", function (e) { // 카테고리 클리 시
-
-        $(".tl").css("transition-duration", "0s");
-        $(".tl").css("opacity", "0"); // 일단 바뀌는 모든 텍스트들 숨김
-
-        nowLanguage = e.target.innerHTML;
-
-        switch (nowLanguage) {
-            case "한국어":
-                nowLang = ko;
-                break;
-            case "ENGLISH":
-                nowLang = en;
-                break;
-            case "简体中文":
-                nowLang = zh;
-                break;
-        }
-
-        $(".languageList .list").css("height", "0px"); // 언어 리스트 닫기
-        $(".languageList .arrow").css("display", "none"); // 언어 리스트 닫기
-
-        languageRendering(nowLang); // DOM 에 직접 함수 생성 후 반복해서 랜더링
-
-        $(".nowLanguage").html(nowLanguage); //  현재 언어 표시되는 부분에 현재 언어 표시
-
-        if(window.innerWidth <= 1024) { // 모바일이면 버튼 안에 공간이 부족. 텍스트 요약
-          $("#sec2_goGitHub").html($("#sec2_goGitHub").html().replace("Visit the Mineral Hub GitHub", "Visit the GitHub"));
-        }
-
-        setTimeout(function() { // 바뀐 텍스트들 Fade in
-            $(".tl").css("transition-duration", "0.7s");
-            $(".tl").css("opacity", "1");
-        }, 200);
-
-
+    $(".languageList .list li").on("click", function (e) { // 카테고리 클릭 시
+        renderText(e.target.innerText);
     });
 
     $(".country").on("mouseover", function() { // 언어 리스트 열기
@@ -139,6 +104,35 @@ function transLanguage() {
         $(".languageList .list").css("height", "0px");
         $(".languageList .arrow").css("display", "none");
     });
+}
+
+function renderText(languageText) {
+    $(".tl").css("transition-duration", "0s");
+    $(".tl").css("opacity", "0"); // 일단 바뀌는 모든 텍스트들 숨김
+
+    switch (languageText) {
+        case "한국어":
+            nowLang = ko;
+            break;
+        case "ENGLISH":
+            nowLang = en;
+            break;
+        case "简体中文":
+            nowLang = zh;
+            break;
+    }
+
+    $(".languageList .list").css("height", "0px"); // 언어 리스트 닫기
+    $(".languageList .arrow").css("display", "none"); // 언어 리스트 닫기
+
+    languageRendering(nowLang); // DOM 에 직접 함수 생성 후 반복해서 랜더링
+
+    $(".nowLanguage").html(languageText); //  현재 언어 표시되는 부분에 현재 언어 표시
+
+    setTimeout(function() { // 바뀐 텍스트들 Fade in
+        $(".tl").css("transition-duration", "0.7s");
+        $(".tl").css("opacity", "1");
+    }, 200);
 }
 
 function languageRendering(nowLang) { // DOM 에 직접 함수 생성 후 반복해서 랜더링
@@ -230,7 +224,7 @@ function transHeader() {
           $("header").css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0)");
           $("header .headerBottom .nav .logo > a").css("background-image", "url('image/mainLogo.png')");
           $("header .headerBottom .nav .menu > li > a").css("color", "#ffffff");
-          $("header .headerTop .snsNav .country > h5 > span").css("color", "#ffffff");
+          $("header .headerBottom .country > h5 > span").css("color", "#ffffff");
 
           for(i = 1 ; i <= 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
             $("header .headerTop .snsNav .menu > .sns" + i).css("background-image", "url('image/headerSns" + i + ".png')");
@@ -246,7 +240,7 @@ function transHeader() {
           $("header").css("box-shadow", "5px 5px 10px rgba(0, 0, 0, 0.2)");
           $("header .headerBottom .nav .logo > a").css("background-image", "url('image/mainLogo_scroll.png')");
           $("header .headerBottom .nav .menu > li > a").css("color", "#000000");
-          $("header .headerTop .snsNav .country > h5 > span").css("color", "#000000");
+          $("header .headerBottom .country > h5 > span").css("color", "#000000");
 
           for(i = 1 ; i <= 7 ; i++) { // sns 버튼들 아이콘을 백그라운드 이미지로 매핑
             $("header .headerTop .snsNav .menu > .sns" + i).css("background-image", "url('image/headerSns" + i + "_scroll.png')");
