@@ -68,8 +68,8 @@ var ko = {
   sec4_title: "Project",
   sec4_subTitle: "Five Stars",
   sec4_projectInfo1: "Five Stars 는 서양 판타지를 소재로 하는 턴제 전략 RPG DApp 게임입니다.",
-  sec4_projectInfo2: "유저들은 게임을 통해 영웅과 장비를 획득할 수있으며, 이는 블록체인 상에 기록되어 유저가 소유하고 활용할 수 있습니다.",
-  sec4_projectInfo3: "Five Stars는 Web 뿐만 아니라 Mobile 디바이스에서도 플레이 가능한 하이 브리드 플랫폼으로서, 언제 어디서든 게임을 즐기실 수 있습니다.",
+  sec4_projectInfo2: "유저들은 게임을 통해 영웅과 장비를 획득할 수 있으며, 이는 블록체인 상에 기록되어 유저가 소유하고 활용할 수 있습니다.",
+  sec4_projectInfo3: "Five Stars는 Web 뿐만 아니라 Mobile 디바이스에서도 플레이 가능한 하이브리드 플랫폼으로서, 언제 어디서든 게임을 즐기실 수 있습니다.",
   sec4_projectContentsTitle1: "One-Step 지갑 계정 생성",
   sec4_projectContentsTitle2: "전 장비 NFT화 / 실시간 거래",
   sec4_projectContentsTitle3: "DEX 거래소를 통한 Klaytn 파트너 게임 간 자산거래",
@@ -144,7 +144,7 @@ var en = {
   sec3_title: "Roadmap",
   sec3_2019_1: '"Five Stars" Beta ver.',
   sec3_2019_2: "Mineral Token exchange listing",
-  sec3_2020_1: '“Five Stars” Grand Launch',
+  sec3_2020_1: '"Five Stars" Grand Launch',
   sec3_2020_2: "In-game DEX integration",
   sec3_2020_3: "Next DApp Game R&D",
   sec3_2020_4: "Other Blockchain platform expansion",
@@ -229,7 +229,7 @@ var zh = {
       "可以独立的区跨链",
   sec2_goGitHub: "往GitHub →",
   sec3_title: "路线图",
-  sec3_2019_1: '“Five Stars"beta版本完成',
+  sec3_2019_1: '"Five Stars"beta版本完成',
   sec3_2019_2: "Mineral Token交易所开始登记",
   sec3_2020_1: '"Five Stars"游戏正式上市',
   sec3_2020_2: "游戏内DEX交易所联动",
@@ -256,3 +256,90 @@ var zh = {
   sec6_ask: "询问 →",
   footer_adress: "京畿道城南市盆唐区三坪洞板桥路253 innovalley A栋5楼"
 };
+
+var jp = {
+    title: "Mineral",
+    nav_about: "About",
+    nav_mineralHub: "Mineral",
+    nav_roadmap: "Roadmap",
+    nav_news: "Project",
+    nav_career: "Career",
+    nav_contact: "Contact",
+    main_title: "Mineral",
+    main_subTitle: "Link to Blockchain<br>" +
+        "Sync to Future",
+    sec1_title: "What is Mineral",
+    sec1_tab1_menu: "概要",
+    sec1_tab1_info:
+        "Mineral TokenはKRC-20基盤で生成され、KlaytnプラットフォームにおけるToken生成予定です。" +
+        "これは,イーダリウム基盤使用時,ゲーム内のアイテム取引の遅いトランザクション処理速度 克服するためが狭く、" +
+        "Klaytnの場合、毎秒3000~4000TPSを実現することができます。",
+    sec1_tab2_menu: "目的",
+    sec1_tab2_info:
+        "Mineral Tokenはゲームプレイを通じて得たユーザーのゲームデータをブロックチェーンで 個人所有化するのに目的を置いています。 " +
+        "これによりユーザとユーザーとの間のデータ取引, さらにはそれぞれ異なるゲーム間のアイテム取引などを自由にできるように手助けする役割をします。",
+    sec1_mTab1_menu: "概要",
+    sec1_mTab1_info:
+        "Mineral TokenはKRC-20基盤で生成され、KlaytnプラットフォームにおけるToken生成予定です。" +
+        "これは,イーダリウム基盤使用時,ゲーム内のアイテム取引の遅いトランザクション処理速度 克服するためが狭く、" +
+        "Klaytnの場合、毎秒3000~4000TPSを実現することができます。",
+    sec1_mTab2_menu: "目的",
+    sec1_mTab2_info:
+        "Mineral Tokenはゲームプレイを通じて得たユーザーのゲームデータをブロックチェーンで 個人所有化するのに目的を置いています。 " +
+        "これによりユーザとユーザーとの間のデータ取引, さらにはそれぞれ異なるゲーム間のアイテム取引などを自由にできるように手助けする役割をします。",
+      
+    sec2_title: "Mineral 의 독립된 메인넷 3종",
+    sec2_card1_front_title: "Mineral",
+    sec2_card1_front_info: "Mineral 생태계 관리",
+    sec2_card1_back_title: "Mineral 기능",
+    sec2_card1_back_info:
+        "DPoS 합의 프로토콜<br>" +
+        "생태계 관리<br>" +
+        "User Side 블록체인 생성<br>" +
+        "Wallet / Explorer<br>" +
+        "SDK 지원",
+    sec2_card2_front_title: "Exchange",
+    sec2_card2_front_info: "Mineral 간의 Hub 역할",
+    sec2_card2_back_title: "Exchange 기능",
+    sec2_card2_back_info:
+        "블록체인 별 노드참여<br>" +
+        "블록체인 간 트랜잭션 처리<br>" +
+        "블록체인 스토어",
+    sec2_card3_front_title: "User Side",
+    sec2_card3_front_info: "사용자가 생성한 Mainnet",
+    sec2_card3_back_title: "User Side 기능",
+    sec2_card3_back_info:
+        "퍼블릭 블록체인<br>" +
+        "프라이빗 블록체인<br>" +
+        "컨소시엄 블록체인<br>" +
+        "노드 개수 설정<br>" +
+        "독립 블록체인 가능",
+    sec2_goGitHub: "GitHub 바로가기 →",
+    sec3_title: "Roadmap",
+    sec3_2019_1: '"Five Stars" ベータバージョン完了',
+    sec3_2019_2: "Mineral Token取引所登録開始",
+    sec3_2020_1: '"Five Stars" ゲーム正式ランチング',
+    sec3_2020_2: "ゲーム内のDEX取引所連動",
+    sec3_2020_3: "後続DAppゲームの開発に着手",
+    sec3_2020_4: "他ブロックチェーンプラットフォーム拡張",
+    sec3_2020_5: "後続DAppゲームランチング",
+    sec3_coming: "正確な日程は次のアップデート予定です。",
+    sec4_title: "Project",
+    sec4_subTitle: "Five Stars",
+    sec4_projectInfo1: "Five Starsは西洋ファンタジーを素材とするターンジェ戦略 RPG DAppゲームです。",
+    sec4_projectInfo2: "ユーザーはゲームを通じて英雄と装備を獲得でき,これはブロック体の上に 記録され,ユーザーが所有し活用できます。 ",
+    sec4_projectInfo3: "Five StarsはWebだけでなくMobile デバイスでもプレイ可能なハイブリッドプラットフォームとして, いつでもどこでもゲームを楽しむことができます。",
+    sec4_projectContentsTitle1: "One-Step財布勘定生成",
+    sec4_projectContentsTitle2: "全装備NFT/リアルタイム取引",
+    sec4_projectContentsTitle3: "DEX取引所を通じたKlaytnパートナーゲーム間の資産取引",
+    sec4_projectContentsText1: "Unity - Klaytnを通じて別途の外部作業なしにゲーム内でアカウ ントと財布を同時に生成することができます。",
+    sec4_projectContentsText2: "ゲーム内のすべての装備はブロック体である上に記録され,ユーザーが永遠に所有し,活用できます。 これは,Mineral Tokenを通してユーザーとリアルタイムで取引できます。",
+    sec4_projectContentsText3: "ゲーム内のDEX取引所が連動し,ユーザーは Mineral TokenとKLAYが互いに取引することができます。",
+    sec5_title: "Career",
+    sec5_contents: "Mineral 의 미래를 함께 만들어갈 인재를 찾습니다.",
+    sec5_apply: "지원하기 →",
+    sec6_title: "Contact",
+    sec6_contents: "Mineralと共にする様々な分野のブロック体である事業パートナーをご招待します。",
+    sec6_ask: "お問い合わせ →",
+    footer_adress: "경기도 성남시 분당구 삼평동 판교로 253 이노밸리 A동 5층"
+  };

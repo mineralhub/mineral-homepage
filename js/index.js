@@ -75,6 +75,10 @@ function initLanguage() {
          console.log("접속 IP: 중국 (중국어)");
          $(".nowLanguage").html("简体中文");
          nowLang = zh;
+     } else if(country == "JP"){
+         console.log("접속 IP: 일본 (일본어)");
+         $(".nowLanguage").html("日本語");
+         nowLang = jp;
      } else {
          console.log("접속 IP: 그 외 (영어)");
          $(".nowLanguage").html("ENGLISH");
@@ -97,7 +101,7 @@ function transLanguage() {
     });
 
     $(".country").on("mouseover", function() { // 언어 리스트 열기
-        $(".languageList .list").css("height", "105px");
+        $(".languageList .list").css("height", "140px");
         $(".languageList .arrow").css("display", "block");
     });
     $(".country").on("mouseleave", function() { // 언어 리스트 닫기
@@ -119,6 +123,9 @@ function renderText(languageText) {
             break;
         case "简体中文":
             nowLang = zh;
+            break;
+        case "日本語":
+            nowLang = jp;
             break;
     }
 
@@ -149,6 +156,9 @@ function languageRendering(nowLang) { // DOM 에 직접 함수 생성 후 반복
           break;
       case zh:
           langString = 'zh';
+          break;
+      case jp:
+          langString = 'jp';
           break;
   }
 

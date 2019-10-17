@@ -1,0 +1,14 @@
+{
+    "http": {
+        "port": 80
+    },
+    "https": {
+        "on": true,
+        "port": 443,
+        "keys": {
+            "key": "../../../../etc/letsencrypt/live/mineralhub.org/privkey.pem",
+            "cert": "../../../../etc/letsencrypt/live/mineralhub.org/cert.pem",
+            "ca": "../../../../etc/letsencrypt/live/mineralhub.org/chain.pem"
+        }
+    }
+}
