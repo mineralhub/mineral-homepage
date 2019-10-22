@@ -1,4 +1,5 @@
 {
+    "domain": "mineralhub.org",
     "http": {
         "port": 80
     },

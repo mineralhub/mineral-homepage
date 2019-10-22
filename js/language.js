@@ -7,8 +7,8 @@ var ko = {
   nav_career: "Career",
   nav_contact: "Contact",
   main_title: "Mineral",
-  main_subTitle: "Link to Blockchain<br>" +
-      "Sync to Future",
+  main_subTitle: "Drive in Blockchain<br>" +
+      "Wake Up Future",
   sec1_title: "What is Mineral",
   sec1_tab1_menu: "개요",
   sec1_tab1_info:
@@ -94,8 +94,8 @@ var en = {
   nav_career: "Career",
   nav_contact: "Contact",
   main_title: "Mineral",
-  main_subTitle: "Link to Blockchain<br>" +
-      "Sync to Future",
+  main_subTitle: "Drive in Blockchain<br>" +
+      "Wake Up Future",
   sec1_title: "What is Mineral",
   sec1_tab1_menu: "Summary",
   sec1_tab1_info:
@@ -179,8 +179,8 @@ var zh = {
   nav_career: "人才招聘",
   nav_contact: "联系我们",
   main_title: "Mineral",
-  main_subTitle: "Link to Blockchain<br>" +
-      "Sync to Future",
+  main_subTitle: "Drive in Blockchain<br>" +
+      "Wake Up Future",
   sec1_title: "什么是Mineral",
   sec1_tab1_menu: "概要",
   sec1_tab1_info:
@@ -266,8 +266,8 @@ var jp = {
     nav_career: "Career",
     nav_contact: "Contact",
     main_title: "Mineral",
-    main_subTitle: "Link to Blockchain<br>" +
-        "Sync to Future",
+    main_subTitle: "Drive in Blockchain<br>" +
+        "Wake Up Future",
     sec1_title: "What is Mineral",
     sec1_tab1_menu: "概要",
     sec1_tab1_info:

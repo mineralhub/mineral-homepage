@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const serverConfig = require('./serverConfig.json');
 
+const domain = serverConfig.domain;
 const port = serverConfig.http.port;
 let count = 0;
 
@@ -15,6 +16,9 @@ const httpsServerOn = serverConfig.https.on;
 if(httpsServerOn) {
   app.enable('trust proxy');
   app.use(function(req, res, next) {
+
+      if(req.host.indexOf(domain) == -1)
+        return next();
       
       if(req.secure && req.host.indexOf("www.") > -1 ) {
           return next();
