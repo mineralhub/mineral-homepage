@@ -59,6 +59,19 @@ $(window).on("load", function() { // 모든 이미지 리소스 까지 다 로�
 
 });
 
+function alertOn(parentDom, text, life) {
+  let div = document.createElement("div");
+  div.id = "alert";
+  div.innerText = text;
+  parentDom.appendChild(div);
+  
+  setTimeout(function() {
+    div.style.opacity = 0;
+    div.style.top = "-50px";
+    setTimeout(function() { parentDom.removeChild(div); }, 1000);
+  }, life);
+}
+
 function initLanguage() {
 
   $.getJSON("https://ipinfo.io", function(data) {

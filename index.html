@@ -31,6 +31,8 @@
     <script src="./js/index.js"></script>
   </head>
   <body>
+    <div id="alertWrap">
+    </div>
     <header>
       <div class="langScript"></div>
         <div class="headerBottom">
@@ -122,6 +124,13 @@
         <div class="mainTitle">
           <h1 class="tl" id="main_title" data-aos="fade-up" data-aos-duration="1500">Mineral</h1>
           <h2 class="tl" id="main_subTitle" data-aos="fade-up" data-aos-duration="3000">Drive in Blockchain<br>Wake Up Future</h2>
+          <div id="whitepaper">
+            <h3><a href="./whitepaper/eng.pdf" target="_blank">Whitepaper</a></h3>
+            <ul>
+              <li><a href="./whitepaper/eng.pdf" target="_blank">ENG</a></li>
+              <li class="comingsoon"><a href="#" onclick="alertOn(document.getElementById('alertWrap'), '한국어 백서는 준비중 입니다.', 2000)">KOR</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="bottomGradation"></div>

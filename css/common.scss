@@ -106,6 +106,20 @@ body {
   font-size: 30px;
   color: #fff;
 }
+#alert {
+  position: fixed;
+  padding: 20px 30px;
+  width: 300px;
+  top: 120px;
+  left: 50%;
+  margin-left: -180px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #fff;
+  transition-duration: 0.5s;
+  animation: alertOn 0.5s;
+  z-index: 1000;
+}
 section, footer { // IE 선 문제
   margin-top: -1px;
 }
@@ -715,6 +729,68 @@ header {
       > h2 {
         margin-top: 20px;
         font-size: 34px;
+      }
+
+      #whitepaper {
+        margin-top: 30px;
+        max-width: 200px;
+        border: 1px solid #fff;
+        transition-duration: .3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fff;
+
+          > h3 {
+            > a {
+              color: #000;
+            }
+          }
+
+          > ul {
+            height: 35px;
+
+            > li {
+  
+              > a {
+  
+              }
+            }
+          }
+        }
+
+        > h3 {
+          text-align: center;
+          padding: 10px;
+
+          > a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+
+        > ul {
+          display: flex;
+          height: 0;
+          overflow: hidden;
+          transition-duration: .3s;
+
+          > li {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+
+            > a {
+
+            }
+          }
+
+          > .comingsoon {
+            > a {
+              color: #888;
+            }
+          }
+        }
       }
     }
   }
@@ -1659,6 +1735,15 @@ footer {
 
 
 /* -------------------- 애니메이션 keyframes -------------------- */
+@keyframes alertOn {
+  from {
+      opacity: 0;
+      top: -50px;
+  } to {
+      opacity: 1;
+      top: 120px;
+  }
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);
