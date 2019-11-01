@@ -779,9 +779,14 @@ header {
             display: flex;
             flex-grow: 1;
             justify-content: center;
+            -webkit-user-drag: none;
 
-            > a {
-
+            > a {   
+              -ms-user-select: none; 
+              -moz-user-select: -moz-none;
+              -khtml-user-select: none;
+              -webkit-user-select: none;
+              user-select: none;
             }
           }
 
@@ -1559,6 +1564,17 @@ section {
       margin: 50px auto;
       max-width: 1000px;
 
+      .youtubePlayer {
+        margin: 0 auto 50px auto;
+        width: 720px;
+        height: 375px;
+
+        > iframe {
+          width: 720px;
+          height: 375px;
+        }
+      }
+
       > p {
         color: #fff;
         text-align: center;
@@ -2114,6 +2130,20 @@ footer {
     overflow-x: hidden;
 
     .wrap {
+
+      .projectInfo {
+
+        .youtubePlayer {
+          width: 85vw;
+          height: 45vw;
+
+          > iframe {
+            max-width: 480px;
+            width: 85vw;
+            height: 45vw;
+          }
+        }
+      }
 
       .projectContents {
 

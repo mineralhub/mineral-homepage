@@ -764,6 +764,14 @@ header .scrollTop:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-user-drag: none;
+}
+
+.main > .wrap .mainTitle #whitepaper > ul > li > a {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .main > .wrap .mainTitle #whitepaper > ul > .comingsoon > a {
@@ -1516,6 +1524,17 @@ section .goBtn:hover > a {
   max-width: 1000px;
 }
 
+.section_news .wrap .projectInfo .youtubePlayer {
+  margin: 0 auto 50px auto;
+  width: 720px;
+  height: 375px;
+}
+
+.section_news .wrap .projectInfo .youtubePlayer > iframe {
+  width: 720px;
+  height: 375px;
+}
+
 .section_news .wrap .projectInfo > p {
   color: #fff;
   text-align: center;
@@ -1894,6 +1913,15 @@ footer .wrap .copyright {
   }
   .section_news {
     overflow-x: hidden;
+  }
+  .section_news .wrap .projectInfo .youtubePlayer {
+    width: 85vw;
+    height: 45vw;
+  }
+  .section_news .wrap .projectInfo .youtubePlayer > iframe {
+    max-width: 480px;
+    width: 85vw;
+    height: 45vw;
   }
   .section_news .wrap .projectContents .projectContentsSection {
     margin: 50px 0;
