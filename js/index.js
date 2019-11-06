@@ -19,7 +19,9 @@ $(document).ready(function () {
 
     AOS.init(); // [aos.css] 스크롤 시 나타나는 애니메이션 셋팅
 
-    fog(); // 메인 섹션 연기 효과
+    if(window.clientInformation.platform.indexOf("Linux x86") == -1) {
+      fog(); // 메인 섹션 연기 효과
+    }
 
     // 모바일이면 처음 들어왔을 때의 브라우저 높이로 main 높이 셋팅
     // 모바일 브라우저의 innerHeight 은 유저의 스크롤에 따라서 계속 변함.
