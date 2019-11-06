@@ -33,33 +33,25 @@ $(document).ready(function () {
 
 });
 
+$(window).on("load", function() {
+  loading();
 
-
-$(window).on("load", function() { // 모든 이미지 리소스 까지 다 로딩하고 난 후에 호출
-    // --------------------------------- 로드 암막
-    var loadDiv = document.getElementById("load");
-    var loadOpacitySpeed = 0.02;
-    var loadOpacity = 1;
-    var loadOpacityStr = "1";
-
-    var loadInterval;
-
-    function load() {
-    loadOpacity -= loadOpacitySpeed;
-    loadOpacityStr = loadOpacity.toString();
-    loadDiv.style.opacity = loadOpacityStr;
-
-        if(loadDiv.style.opacity < 0) {
-          loadDiv.style.display = "none";
-          clearInterval(loadInterval);
-        }
-    }
-
-
-    loadInterval = setInterval(load, 15); // 로드 암막
-    // --------------------------------- 로드 암막
-
+  var twitterDelay = 3000;
+  if(window.innerWidth <= 767) {
+    twitterDelay = 0;
+  }
+  setTimeout(function() {
+    toggleTwitter();
+  }, twitterDelay);
 });
+
+function loading() {
+  var loadingDiv = document.getElementById("load");
+  loadingDiv.className = "loaded";
+  setTimeout(function() {
+    loadingDiv.remove();
+  }, 1000);
+}
 
 function alertOn(parentDom, text, life) {
   let div = document.createElement("div");
@@ -72,6 +64,41 @@ function alertOn(parentDom, text, life) {
     div.style.top = "-50px";
     setTimeout(function() { parentDom.removeChild(div); }, 1000);
   }, life);
+}
+
+var defaultWhitepaperLanguage = "eng";
+function routeWhitepaper() {
+  if(window.innerWidth <= 767) {
+    return;
+  } else {
+    window.open(document.location.href + "whitepaper/" + defaultWhitepaperLanguage + ".pdf", '_blank'); 
+  }
+}
+
+var cooltime = 500; // 0.5 초
+var twitterStatus = {
+  on: false,
+  lastClick: 0
+};
+function toggleTwitter() {
+  if(new Date().getTime() - twitterStatus.lastClick < cooltime) {
+    return;
+  }
+  twitterStatus = {
+    on: !twitterStatus.on,
+    lastClick: new Date().getTime()
+  }
+  var twitterBox = document.getElementById("twitterBox");
+  var floatingActionButton = document.getElementById("floatingActionButton");
+  if(twitterStatus.on) {
+    twitterBox.className = "twitterOn";
+    setTimeout(function() {
+      floatingActionButton.style.zIndex = 90;
+    }, cooltime);
+  } else {
+    twitterBox.className = "twitterOff";
+    floatingActionButton.style.zIndex = 92;
+  }
 }
 
 function initLanguage() {
