@@ -78,7 +78,7 @@ function routeWhitepaper() {
 var cooltime = 500; // 0.5 초
 var twitterStatus = {
   on: false,
-  lastClick: 0
+  lastClick: new Date().getTime() + 3000 // 첫 3초는 강제 View
 };
 function toggleTwitter() {
   if(new Date().getTime() - twitterStatus.lastClick < cooltime) {
@@ -88,16 +88,25 @@ function toggleTwitter() {
     on: !twitterStatus.on,
     lastClick: new Date().getTime()
   }
+  var snsBox = document.getElementById("SNSBox");
   var twitterBox = document.getElementById("twitterBox");
   var floatingActionButton = document.getElementById("floatingActionButton");
   if(twitterStatus.on) {
     twitterBox.className = "twitterOn";
     setTimeout(function() {
       floatingActionButton.style.zIndex = 90;
+      snsBox.style.width = 0;
+      snsBox.style.height = 0;
     }, cooltime);
   } else {
     twitterBox.className = "twitterOff";
     floatingActionButton.style.zIndex = 92;
+    if(window.innerWidth <= 767) {
+      snsBox.style.width = "80%";
+    } else {
+      snsBox.style.width = "440px";
+    }
+    snsBox.style.height = "360px";
   }
 }
 
