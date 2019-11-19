@@ -2089,6 +2089,21 @@ footer .wrap .copyright {
     height: 50px;
     background-size: contain;
   }
+  .floatingActionButton .SNSBox .telegram .telegramBtn {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: contain;
+  }
+  .floatingActionButton .SNSBox .telegram .telegramLanguages {
+    padding: 0px 30px 0 25px;
+    right: 25px;
+    bottom: 1px;
+    height: 48px;
+  }
+  .floatingActionButton .SNSBox .telegram .telegramLanguages > div {
+    margin: 0 6px;
+  }
   .wrap {
     padding: 0 0px;
     width: 980px;

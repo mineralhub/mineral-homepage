@@ -2079,6 +2079,27 @@ footer {
         height: 50px;
         background-size: contain;
       }
+
+      .telegram {
+
+        .telegramBtn {
+          width: 50px;
+          height: 50px;
+          background-position: center;
+          background-size: contain;
+        }
+
+        .telegramLanguages {
+          padding: 0px 30px 0 25px;
+          right: 25px;
+          bottom: 1px;
+          height: 48px;
+  
+          > div {
+            margin: 0 6px;
+          }
+        }
+      }
     }
   }
 
