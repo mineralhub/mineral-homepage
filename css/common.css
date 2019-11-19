@@ -695,13 +695,15 @@ header .scrollTop:hover {
 }
 
 .floatingActionButton .SNSBox {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 60px;
   bottom: 100px;
 }
 
 .floatingActionButton .SNSBox #twitterBox {
   position: relative;
+  bottom: 80px;
+  right: 5px;
   width: 440px;
   height: 360px;
   overflow: hidden;
@@ -780,7 +782,7 @@ header .scrollTop:hover {
 .floatingActionButton .SNSBox .twitterBtn {
   position: absolute;
   right: -20px;
-  bottom: -20px;
+  bottom: 55px;
   width: 60px;
   height: 60px;
   background: url("../image/twitterBtn.png") no-repeat;
@@ -803,6 +805,84 @@ header .scrollTop:hover {
 .floatingActionButton .SNSBox .twitterBtn:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.floatingActionButton .SNSBox .telegram {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  opacity: 1;
+  z-index: 100;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramBtn {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 60px;
+  height: 60px;
+  background: url("../image/telegramBtn.png") no-repeat;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramBtn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 40px 0 30px;
+  right: 30px;
+  bottom: 1px;
+  height: 58px;
+  border-radius: 60px 0 0 60px;
+  background: #0784bb;
+  -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div {
+  margin: 0 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div > a:hover {
+  text-decoration: underline;
 }
 
 /* ----- main ----- */

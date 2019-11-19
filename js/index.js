@@ -110,6 +110,28 @@ function toggleTwitter() {
   }
 }
 
+var telegramStatus = {
+  on: false,
+  lastClick: 0
+};
+function toggleTelegram() {
+  if(new Date().getTime() - telegramStatus.lastClick < cooltime) {
+    return;
+  }
+  telegramStatus = {
+    on: !telegramStatus.on,
+    lastClick: new Date().getTime()
+  }
+  var telegramLanguages = document.getElementById("telegramLanguages");
+  if(telegramStatus.on) {
+    telegramLanguages.style.transform = "scaleX(1)";
+    telegramLanguages.style.opacity = "1";
+  } else {
+    telegramLanguages.style.transform = "scaleX(0)";
+    telegramLanguages.style.opacity = "0";
+  }
+}
+
 function initLanguage() {
 
   $.getJSON("https://ipinfo.io", function(data) {
