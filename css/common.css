@@ -82,7 +82,6 @@
   padding: 0;
   border: 0;
   color: #333;
-  font-family: 'NotoSansCJKtc-Medium', sans-serif;
 }
 
 body {
@@ -97,6 +96,8 @@ body {
   left: 0;
   background-color: black;
   z-index: 10000;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   opacity: 1;
 }
 
@@ -108,6 +109,10 @@ body {
   top: 47%;
   font-size: 30px;
   color: #fff;
+}
+
+.loaded {
+  opacity: 0 !important;
 }
 
 #alert {
@@ -679,6 +684,206 @@ header .scrollTop:hover {
           transition-duration: 0.5s;
 }
 
+.floatingActionButton {
+  width: 1200px;
+  margin-left: -600px;
+  bottom: 0;
+  left: 50%;
+  position: fixed;
+  z-index: 90;
+}
+
+.floatingActionButton .SNSBox {
+  position: fixed;
+  right: 60px;
+  bottom: 100px;
+}
+
+.floatingActionButton .SNSBox #twitterBox {
+  position: relative;
+  bottom: 80px;
+  right: 5px;
+  width: 440px;
+  height: 360px;
+  overflow: hidden;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.floatingActionButton .SNSBox #twitterBox .twitterWrap {
+  position: absolute;
+  padding: 25px;
+  bottom: 10px;
+  right: 10px;
+  width: 380px;
+  height: 300px;
+  border-radius: 10px 10px 0 10px;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.floatingActionButton .SNSBox #twitterBox .twitterWrap::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.floatingActionButton .SNSBox #twitterBox .twitterWrap::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.floatingActionButton .SNSBox #twitterBox .twitterWrap::-webkit-scrollbar-thumb {
+  background-color: #6d6d6d;
+}
+
+.floatingActionButton .SNSBox #twitterBox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 430px;
+  height: 350px;
+  border-radius: 10px 10px 0 10px;
+  background-color: #b9b9b9;
+  z-index: -100;
+}
+
+.floatingActionButton .SNSBox .twitterOn {
+  -webkit-animation-name: twitterOn;
+          animation-name: twitterOn;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.floatingActionButton .SNSBox .twitterOff {
+  -webkit-animation-name: twitterOff;
+          animation-name: twitterOff;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.floatingActionButton .SNSBox .twitterBtn {
+  position: absolute;
+  right: -20px;
+  bottom: 55px;
+  width: 60px;
+  height: 60px;
+  background: url("../image/twitterBtn.png") no-repeat;
+  background-color: #fff;
+  border-radius: 60px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floatingActionButton .SNSBox .twitterBtn:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+          box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+}
+
+.floatingActionButton .SNSBox .twitterBtn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.floatingActionButton .SNSBox .telegram {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  opacity: 1;
+  z-index: 100;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramBtn {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 60px;
+  height: 60px;
+  background: url("../image/telegramBtn.png") no-repeat;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramBtn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 40px 0 30px;
+  right: 30px;
+  bottom: 1px;
+  height: 58px;
+  border-radius: 60px 0 0 60px;
+  background: #0784bb;
+  -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div {
+  margin: 0 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.floatingActionButton .SNSBox .telegram .telegramLanguages > div > a:hover {
+  text-decoration: underline;
+}
+
 /* ----- main ----- */
 .main {
   position: relative;
@@ -693,10 +898,15 @@ header .scrollTop:hover {
   background-size: cover;
 }
 
+.main > .wrap {
+  position: relative;
+  height: 100%;
+}
+
 .main > .wrap .mainTitle {
   position: absolute;
-  top: 50%;
-  z-index: 10;
+  bottom: 20%;
+  z-index: 91;
 }
 
 .main > .wrap .mainTitle > h1, .main > .wrap .mainTitle h2 {
@@ -714,6 +924,7 @@ header .scrollTop:hover {
 }
 
 .main > .wrap .mainTitle #whitepaper {
+  position: relative;
   margin-top: 30px;
   max-width: 200px;
   border: 1px solid #fff;
@@ -732,6 +943,7 @@ header .scrollTop:hover {
 
 .main > .wrap .mainTitle #whitepaper:hover > ul {
   height: 35px;
+  border: 1px solid #fff;
 }
 
 .main > .wrap .mainTitle #whitepaper > h3 {
@@ -745,13 +957,19 @@ header .scrollTop:hover {
 }
 
 .main > .wrap .mainTitle #whitepaper > ul {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -1px;
+  width: 100%;
   height: 0;
   overflow: hidden;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .main > .wrap .mainTitle #whitepaper > ul > li {
@@ -765,9 +983,21 @@ header .scrollTop:hover {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-user-drag: none;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+.main > .wrap .mainTitle #whitepaper > ul > li:hover {
+  background-color: #fff;
+}
+
+.main > .wrap .mainTitle #whitepaper > ul > li:hover > a {
+  color: #333;
 }
 
 .main > .wrap .mainTitle #whitepaper > ul > li > a {
+  color: #fff;
+  line-height: 35px;
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -788,6 +1018,8 @@ header .scrollTop:hover {
 }
 
 .main .fogWrap {
+  position: absolute;
+  top: 0;
   z-index: 5;
   overflow: hidden;
   width: 100%;
@@ -1495,6 +1727,7 @@ section .goBtn:hover > a {
 .section_news {
   background-color: #251345;
   padding: 100px 0;
+  overflow: hidden;
 }
 
 .section_news .wrap {
@@ -1719,6 +1952,58 @@ footer .wrap .copyright {
   }
 }
 
+@-webkit-keyframes twitterOn {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes twitterOn {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes twitterOff {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes twitterOff {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -1776,6 +2061,48 @@ footer .wrap .copyright {
 }
 
 @media (max-width: 1280px) {
+  .floatingActionButton {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-left: initial;
+  }
+  .floatingActionButton .SNSBox {
+    width: 80%;
+    bottom: 50px;
+    right: 50px;
+  }
+  .floatingActionButton .SNSBox #twitterBox {
+    width: 100%;
+  }
+  .floatingActionButton .SNSBox #twitterBox .twitterWrap {
+    width: 80%;
+    -webkit-box-shadow: 10px 10px 0px #b9b9b9;
+            box-shadow: 10px 10px 0px #b9b9b9;
+  }
+  .floatingActionButton .SNSBox #twitterBox::after {
+    display: none;
+  }
+  .floatingActionButton .SNSBox .twitterBtn {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+  }
+  .floatingActionButton .SNSBox .telegram .telegramBtn {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: contain;
+  }
+  .floatingActionButton .SNSBox .telegram .telegramLanguages {
+    padding: 0px 30px 0 25px;
+    right: 25px;
+    bottom: 1px;
+    height: 48px;
+  }
+  .floatingActionButton .SNSBox .telegram .telegramLanguages > div {
+    margin: 0 6px;
+  }
   .wrap {
     padding: 0 0px;
     width: 980px;

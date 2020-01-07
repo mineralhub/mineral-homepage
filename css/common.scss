@@ -82,7 +82,7 @@ $defaultWidth: 1200px;
   padding: 0;
   border: 0;
   color: #333;
-  font-family: 'NotoSansCJKtc-Medium', sans-serif;
+  // font-family: 'NotoSansCJKtc-Medium', sans-serif;
 }
 body {
   background-color: #171738;
@@ -95,6 +95,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 1);
   z-index: 10000;
+  transition-duration: 1s;
   opacity: 1;
 }
 #load .fas {
@@ -105,6 +106,9 @@ body {
   top: 47%;
   font-size: 30px;
   color: #fff;
+}
+.loaded {
+  opacity: 0 !important;
 }
 #alert {
   position: fixed;
@@ -697,6 +701,176 @@ header {
   }
 }
 
+.floatingActionButton {
+  width: 1200px;
+  margin-left: -600px;
+  bottom: 0;
+  left: 50%;
+  position: fixed;
+  z-index: 90;
+
+  .SNSBox {
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+  
+    #twitterBox {
+      position: relative;
+      bottom: 80px;
+      right: 5px;
+      width: 440px;
+      height: 360px;
+      overflow: hidden;
+      transition-duration: .1s;
+      transform-origin: bottom right;
+  
+      .twitterWrap {
+        position: absolute;
+        padding: 25px;
+        bottom: 10px;
+        right: 10px;
+        width: 380px;
+        height: 300px;
+        border-radius: 10px 10px 0 10px;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition-duration: .3s;
+        transition-timing-function: linear;
+  
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+          
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 5px;
+            background-color: #fff;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: #6d6d6d;
+        }
+  
+        .twitter {
+        }
+      }
+  
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 430px;
+        height: 350px;
+        border-radius: 10px 10px 0 10px;
+        background-color: #b9b9b9;
+        z-index: -100;
+      }
+    }
+  
+    .twitterOn {
+      animation-name: twitterOn;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+  
+    .twitterOff {
+      animation-name: twitterOff;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+  
+    .twitterBtn {
+      position: absolute;
+      right: -20px;
+      bottom: 55px;
+      width: 60px;
+      height: 60px;
+      background: url("../image/twitterBtn.png") no-repeat;
+      background-color: #fff;
+      border-radius: 60px;
+      transition-duration: .3s;
+      opacity: 1;
+      cursor: pointer;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, .3);
+  
+      &:hover {
+        opacity: 1;
+        box-shadow: 0px 0px 12px rgba(255, 255, 255, .3);
+      }
+  
+      &:active {
+        transform: scale(.9);
+      }
+    }
+
+    .telegram {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      opacity: 1;
+      z-index: 100;
+      transition-duration: .3s;
+      -webkit-user-drag: none;
+      user-select: none;
+  
+      .telegramBtn {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 60px;
+        height: 60px;
+        background: url("../image/telegramBtn.png") no-repeat;
+        border-radius: 60px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, .3);
+        transition-duration: .3s;
+        cursor: pointer;
+        z-index: 1;
+        transform-origin: center;
+
+        &:active {
+          transform: scale(.9);
+        }
+      }
+
+      .telegramLanguages {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: 0px 40px 0 30px;
+        right: 30px;
+        bottom: 1px;
+        height: 58px;
+        border-radius: 60px 0 0 60px;
+        background: #0784bb;
+        box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transform: scaleX(0);
+        transition-duration: .3s;
+        transform-origin: right;
+
+        > div {
+          margin: 0 6px;
+          cursor: pointer;
+          color: #fff;
+
+          > a {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 /* ----- main ----- */
@@ -711,11 +885,13 @@ header {
   background-size: cover;
 
   > .wrap {
+    position: relative;
+    height: 100%;
 
     .mainTitle {
       position: absolute;
-      top: 50%;
-      z-index: 10;
+      bottom: 20%;
+      z-index: 91;
 
       > h1, h2 {
         font-size: 58px;
@@ -732,6 +908,7 @@ header {
       }
 
       #whitepaper {
+        position: relative;
         margin-top: 30px;
         max-width: 200px;
         border: 1px solid #fff;
@@ -749,6 +926,7 @@ header {
 
           > ul {
             height: 35px;
+            border: 1px solid #fff;
 
             > li {
   
@@ -770,18 +948,34 @@ header {
         }
 
         > ul {
+          position: absolute;
           display: flex;
+          margin-left: -1px;
+          width: 100%;
           height: 0;
           overflow: hidden;
           transition-duration: .3s;
+          transition-delay: .1s;
+          border: 1px solid rgba(0, 0, 0, 0);
 
           > li {
             display: flex;
             flex-grow: 1;
             justify-content: center;
             -webkit-user-drag: none;
+            transition-duration: .3s;
 
-            > a {   
+            &:hover {
+              background-color: #fff;
+
+              > a {
+                color: #333;
+              }
+            }
+
+            > a {
+              color: #fff;
+              line-height: 35px;
               -ms-user-select: none; 
               -moz-user-select: -moz-none;
               -khtml-user-select: none;
@@ -810,6 +1004,8 @@ header {
   }
 
   .fogWrap {
+    position: absolute;
+    top: 0;
     z-index: 5;
     overflow: hidden;
     width: 100%;
@@ -1538,6 +1734,7 @@ section {
 .section_news {
   background-color: #251345;
   padding: 100px 0;
+  overflow: hidden;
 
   .wrap {
     position: relative;
@@ -1760,6 +1957,26 @@ footer {
       top: 120px;
   }
 }
+@keyframes twitterOn {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes twitterOff {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);
@@ -1829,6 +2046,63 @@ footer {
 // ------------------------------------------------------------ 반응형 비활성
 
 @media (max-width: 1280px) { // --- 태블릿
+  .floatingActionButton {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-left: initial;
+
+    .SNSBox {
+      width: 80%;
+      bottom: 50px;
+      right: 50px;
+
+      #twitterBox {
+        width: 100%;
+
+        .twitterWrap {
+          width: 80%;
+          box-shadow: 10px 10px 0px #b9b9b9;
+
+          .twitter {
+            
+          }
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .twitterBtn {
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
+      .telegram {
+
+        .telegramBtn {
+          width: 50px;
+          height: 50px;
+          background-position: center;
+          background-size: contain;
+        }
+
+        .telegramLanguages {
+          padding: 0px 30px 0 25px;
+          right: 25px;
+          bottom: 1px;
+          height: 48px;
+  
+          > div {
+            margin: 0 6px;
+          }
+        }
+      }
+    }
+  }
+
   .wrap {
     padding: 0 0px;
     width: 980px;
