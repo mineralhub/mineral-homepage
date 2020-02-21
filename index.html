@@ -1,335 +1,705 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Mineral</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="robots" content="all">
-    <meta name="google-site-verification" content="KqLpONCgtL69DciMne6bOJRKMK9tHQDgFUD11Z72L64"/>
-    <meta name="keywords" content="미네랄허브 Mineral 블록체인 Blockchain (주)스카이피플 스카이피플 SkyPeople">
-    <meta name="description" content="Mineral, Link to Blockchain Sync to Future">
-    <meta name="author" content="SKYPEOPLE">
-    <meta property="og:title" content="Mineral">
-    <meta property="og:url" content="https://www.mineralhub.org/">
-    <meta property="og:image" content="https://www.mineralhub.org/image/ogImage.png">
-    <meta property="og:description" content="Mineral, Link to Blockchain Sync to Future">
-    <meta name="twitter:title" content="Mineral">
-    <meta name="twitter:url" content="https://www.mineralhub.org/">
-    <meta name="twitter:image" content="https://www.mineralhub.org/image/ogImage.png">
-    <meta name="twitter:description" content="Mineral, Link to Blockchain Sync to Future">
-    <link rel="shortcut icon" href="image/favicon.ico"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/common.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src="./js/jquery.nav.js"></script>
-    <script src="./js/language.js"></script>
-    <script src="./js/index.js"></script>
-  </head>
-  <body>
-    <div id="alertWrap">
-    </div>
-    <header>
-      <div class="langScript"></div>
-        <div class="headerBottom">
-          <div class="wrap">
-            <div class="nav">
-              <div class="logo"><a href="#" onclick="location.reload();"></a></div>
-              <ul class="menu">
-                <li style="display: none;"><a href="#section1"></a></li>
-                <li><a href="#section2" class="tl" id="nav_about">About</a></li>
-                <li><a href="#section3" class="tl" id="nav_news">Project</a></li>
-                <li><a href="#section4" class="tl" id="nav_roadmap">Roadmap</a></li>
-                <li><a href="#section5" class="tl" id="nav_contact">Contact</a></li>
-                <div class="country">
-                  <h5><span class="nowLanguage"></span><span class="arrow">▼</span></h5>
-                  <ul class="languageList">
-                    <div class="arrow"></div>
-                    <div class="list">
-                      <li>한국어</li>
-                      <li>ENGLISH</li>
-                      <li>简体中文</li>
-                      <li>日本語</li>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mineral</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="robots" content="all" />
+        <meta
+            name="google-site-verification"
+            content="KqLpONCgtL69DciMne6bOJRKMK9tHQDgFUD11Z72L64"
+        />
+        <meta
+            name="keywords"
+            content="미네랄허브 Mineral 블록체인 Blockchain (주)스카이피플 스카이피플 SkyPeople"
+        />
+        <meta
+            name="description"
+            content="Mineral, Link to Blockchain Sync to Future"
+        />
+        <meta name="author" content="SKYPEOPLE" />
+        <meta property="og:title" content="Mineral" />
+        <meta property="og:url" content="https://www.mineralhub.org/" />
+        <meta
+            property="og:image"
+            content="https://www.mineralhub.org/image/ogImage.png"
+        />
+        <meta
+            property="og:description"
+            content="Mineral, Link to Blockchain Sync to Future"
+        />
+        <meta name="twitter:title" content="Mineral" />
+        <meta name="twitter:url" content="https://www.mineralhub.org/" />
+        <meta
+            name="twitter:image"
+            content="https://www.mineralhub.org/image/ogImage.png"
+        />
+        <meta
+            name="twitter:description"
+            content="Mineral, Link to Blockchain Sync to Future"
+        />
+        <link rel="shortcut icon" href="image/favicon.ico" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/common.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+        <script src="./js/jquery.nav.js"></script>
+        <script src="./js/language.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body>
+        <div id="alertWrap"></div>
+        <header>
+            <div class="langScript"></div>
+            <div class="headerBottom">
+                <div class="wrap">
+                    <div class="nav">
+                        <div class="logo">
+                            <a href="#" onclick="location.reload();"></a>
+                        </div>
+                        <ul class="menu">
+                            <li style="display: none;">
+                                <a href="#section1"></a>
+                            </li>
+                            <li>
+                                <a href="#section2" class="tl" id="nav_about"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#section3" class="tl" id="nav_news"
+                                    >Project</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#section4" class="tl" id="nav_roadmap"
+                                    >Roadmap</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#section5" class="tl" id="nav_contact"
+                                    >Contact</a
+                                >
+                            </li>
+                            <div class="country">
+                                <h5>
+                                    <span class="nowLanguage"></span
+                                    ><span class="arrow">▼</span>
+                                </h5>
+                                <ul class="languageList">
+                                    <div class="arrow"></div>
+                                    <div class="list">
+                                        <li>한국어</li>
+                                        <li>ENGLISH</li>
+                                        <li>简体中文</li>
+                                        <li>日本語</li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </ul>
                     </div>
-                  </ul>
                 </div>
-              </ul>
             </div>
-          </div>
-        </div>
 
-      <!-- <div class="scrollTop"></div> -->
-    </header>
+            <!-- <div class="scrollTop"></div> -->
+        </header>
 
-    <div class="mobileHeader">
-
-      <div class="wrap">
-        <!-- <div class="leftBtn" onclick="mobileMenu();"></div> -->
-        <div class="logo" onclick="location.reload();"></div>
-        <div class="rightBtn">
-          <div class="country">
-            <h5><span class="nowLanguage"></span><span class="arrow">▼</span></h5>
-            <ul class="languageList">
-              <div class="arrow"></div>
-              <div class="list">
-                <li>한국어</li>
-                <li>ENGLISH</li>
-                <li>简体中文</li>
-                <li>日本語</li>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="dark" onclick="mobileMenu();"></div>
-
-      <div class="menu">
-        <div class="menuWrap">
-          <ul class="mobileNav">
-            <li style="display: none;"><a href="#section1"></a></li>
-            <li><a href="#section2" class="tl" id="nav_about">About</a></li>
-            <li><a href="#section3" class="tl" id="nav_news">Project</a></li>
-            <li><a href="#section4" class="tl" id="nav_roadmap">Roadmap</a></li>
-            <li><a href="#section5" class="tl" id="nav_contact">Contact</a></li>
-          </ul>
-          <ul class="mobileSnsNav">
-            <div>
-              <li class="sns1"><a href="https://t.me/MineralHubKOR" target="_blank"></a></li>
-              <li class="sns2"><a href="https://t.me/MineralHubGLOBAL" target="_blank"></a></li>
-              <li class="sns3"><a href="https://medium.com/@SkypeopleMaster" target="_blank"></a></li>
+        <div class="mobileHeader">
+            <div class="wrap">
+                <!-- <div class="leftBtn" onclick="mobileMenu();"></div> -->
+                <div class="logo" onclick="location.reload();"></div>
+                <div class="rightBtn">
+                    <div class="country">
+                        <h5>
+                            <span class="nowLanguage"></span
+                            ><span class="arrow">▼</span>
+                        </h5>
+                        <ul class="languageList">
+                            <div class="arrow"></div>
+                            <div class="list">
+                                <li>한국어</li>
+                                <li>ENGLISH</li>
+                                <li>简体中文</li>
+                                <li>日本語</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div>
-              <li class="sns4"><a href="https://mineralhub.blog.me/" target="_blank"></a></li>
-              <li class="sns5"><a href="https://www.reddit.com/user/SkypeopleSR" target="_blank"></a></li>
-              <li class="sns6"><a href="https://github.com/mineralhub/mineral" target="_blank"></a></li>
+
+            <div class="dark" onclick="mobileMenu();"></div>
+
+            <div class="menu">
+                <div class="menuWrap">
+                    <ul class="mobileNav">
+                        <li style="display: none;"><a href="#section1"></a></li>
+                        <li>
+                            <a href="#section2" class="tl" id="nav_about"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#section3" class="tl" id="nav_news"
+                                >Project</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#section4" class="tl" id="nav_roadmap"
+                                >Roadmap</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#section5" class="tl" id="nav_contact"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="mobileSnsNav">
+                        <div>
+                            <li class="sns1">
+                                <a
+                                    href="https://t.me/MineralHubKOR"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li class="sns2">
+                                <a
+                                    href="https://t.me/MineralHubGLOBAL"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li class="sns3">
+                                <a
+                                    href="https://medium.com/@SkypeopleMaster"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="sns4">
+                                <a
+                                    href="https://mineralhub.blog.me/"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li class="sns5">
+                                <a
+                                    href="https://www.reddit.com/user/SkypeopleSR"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li class="sns6">
+                                <a
+                                    href="https://github.com/mineralhub/mineral"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="sns7">
+                                <a
+                                    href="https://twitter.com/skypeoplemaster"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li class="sns8">
+                                <a
+                                    href="https://www.facebook.com/SkypeopleMNR"
+                                    target="_blank"
+                                ></a>
+                            </li>
+                            <li></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-            <div>
-              <li class="sns7"><a href="https://twitter.com/skypeoplemaster" target="_blank"></a></li>
-              <li class="sns8"><a href="https://www.facebook.com/SkypeopleMNR" target="_blank"></a></li>
-              <li></li>
+        </div>
+
+        <div id="floatingActionButton" class="floatingActionButton">
+            <div id="SNSBox" class="SNSBox">
+                <div id="twitterBox">
+                    <div class="twitterWrap">
+                        <div class="twitter">
+                            <a
+                                class="twitter-timeline"
+                                href="https://twitter.com/SkypeopleMaster?ref_src=twsrc%5Etfw"
+                                >Tweets by SkypeopleMaster</a
+                            >
+                            <script
+                                async
+                                src="https://platform.twitter.com/widgets.js"
+                            ></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="twitterBtn" onclick="toggleTwitter();"></div>
+                <div class="telegram">
+                    <div class="telegramBtn" onclick="toggleTelegram();"></div>
+                    <div id="telegramLanguages" class="telegramLanguages">
+                        <div>
+                            <a href="https://t.me/MineralGLOBAL" target="_blank"
+                                >GLOBAL</a
+                            >
+                        </div>
+                        <div>
+                            <a href="https://t.me/MineralKorea" target="_blank"
+                                >KOREA</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
-          </ul>
         </div>
-      </div>
 
-    </div>
-
-    <div id="floatingActionButton" class="floatingActionButton">
-      <div id="SNSBox" class="SNSBox">
-        <div id="twitterBox">
-          <div class="twitterWrap">
-              <div class="twitter">
-                <a class="twitter-timeline" href="https://twitter.com/SkypeopleMaster?ref_src=twsrc%5Etfw">Tweets by SkypeopleMaster</a> 
-                <script async src="https://platform.twitter.com/widgets.js"></script>
-              </div>
+        <div class="main" id="section1">
+            <div class="wrap">
+                <div class="mainTitle">
+                    <h1
+                        class="tl"
+                        id="main_title"
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                    >
+                        Mineral
+                    </h1>
+                    <h2
+                        class="tl"
+                        id="main_subTitle"
+                        data-aos="fade-up"
+                        data-aos-duration="3000"
+                    >
+                        Drive in Blockchain<br />Wake Up Future
+                    </h2>
+                    <div id="whitepaper">
+                        <h3 onclick="routeWhitepaper();"><a>Whitepaper</a></h3>
+                        <ul>
+                            <li>
+                                <a href="./whitepaper/eng.pdf" target="_blank"
+                                    >ENG</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./whitepaper/kor.pdf" target="_blank"
+                                    >KOR</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="twitterBtn" onclick="toggleTwitter();"></div>
-        <div class="telegram">
-          <div class="telegramBtn" onclick="toggleTelegram();"></div>
-          <div id="telegramLanguages" class="telegramLanguages">
-            <div><a href="https://t.me/MineralGLOBAL" target="_blank">GLOBAL</a></div>
-            <div><a href="https://t.me/MineralKorea" target="_blank">KOREA</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="main" id="section1">
-      <div class="wrap">
-        <div class="mainTitle">
-          <h1 class="tl" id="main_title" data-aos="fade-up" data-aos-duration="1500">Mineral</h1>
-          <h2 class="tl" id="main_subTitle" data-aos="fade-up" data-aos-duration="3000">Drive in Blockchain<br>Wake Up Future</h2>
-          <div id="whitepaper">
-            <h3 onclick="routeWhitepaper();"><a>Whitepaper</a></h3>
-            <ul>
-              <li><a href="./whitepaper/eng.pdf" target="_blank">ENG</a></li>
-              <li><a href="./whitepaper/kor.pdf" target="_blank">KOR</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="bottomGradation"></div>
-      <div class="fogWrap"><canvas class="fog" id="fog"></canvas></div>
-      <div class="particleWrap"><div id="particles-js"></div></div>
-      <script src="js/particles.min.js"></script>
-      <script src="js/app.js"></script>
-    </div>
-
-    <section class="section1 section_about" id="section2">
-      <div class="wrap">
-        <h5 class="tl areaName" id="sec1_title" data-aos="fade-up" data-aos-duration="1000">What is Mineral</h5>
-        <div id="tabs">
-          <ul>
-            <li><a href="#tabs-1" class="tl" id="sec1_tab1_menu">Summary</a></li>
-            <li><a href="#tabs-2" class="tl" id="sec1_tab2_menu">Object</a></li>
-          </ul>
-          <div id="tabs-1" class="tabContents" data-aos="fade-up" data-aos-duration="1500">
-            <p class="tl" id="sec1_tab1_info">
-              Mineral Token will be created based on KRC-20 and will be created on the Klaytn platform. This is based on the Etherium, which is used to slow transaction processing of items in the game. To overcome, Klaytn can implement 3000-4000 TPS per second.
-            </p>
-          </div>
-          <div id="tabs-2" class="tabContents">
-            <p class="tl" id="sec1_tab2_info">
-              Mineral Token has blockchain the game data of users who have been playing games. It is aimed at personal ownership. This enables data transactions between users and users. In addition, it serves to help free trade of items between different games.
-            </p>
-          </div>
-          <div class="cube"></div>
+            <div class="bottomGradation"></div>
+            <div class="fogWrap"><canvas class="fog" id="fog"></canvas></div>
+            <div class="particleWrap"><div id="particles-js"></div></div>
+            <script src="js/particles.min.js"></script>
+            <script src="js/app.js"></script>
         </div>
 
-        <div id="mobileTabs">
-          <div class="mobileTab activeTab">
-            <h3 class="tl" id="sec1_mTab1_menu"></h3>
-            <div>
-              <p class="tl" id="sec1_mTab1_info">
-                
-              </p>
+        <section class="section1 section_about" id="section2">
+            <div class="wrap">
+                <h5
+                    class="tl areaName"
+                    id="sec1_title"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    What is Mineral
+                </h5>
+                <div id="tabs">
+                    <ul>
+                        <li>
+                            <a href="#tabs-1" class="tl" id="sec1_tab1_menu"
+                                >Summary</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#tabs-2" class="tl" id="sec1_tab2_menu"
+                                >Object</a
+                            >
+                        </li>
+                    </ul>
+                    <div
+                        id="tabs-1"
+                        class="tabContents"
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                    >
+                        <p class="tl" id="sec1_tab1_info">
+                            Mineral Token will be created based on KRC-20 and
+                            will be created on the Klaytn platform. This is
+                            based on the Etherium, which is used to slow
+                            transaction processing of items in the game. To
+                            overcome, Klaytn can implement 3000-4000 TPS per
+                            second.
+                        </p>
+                    </div>
+                    <div id="tabs-2" class="tabContents">
+                        <p class="tl" id="sec1_tab2_info">
+                            Mineral Token has blockchain the game data of users
+                            who have been playing games. It is aimed at personal
+                            ownership. This enables data transactions between
+                            users and users. In addition, it serves to help free
+                            trade of items between different games.
+                        </p>
+                    </div>
+                    <div class="cube"></div>
+                </div>
+
+                <div id="mobileTabs">
+                    <div class="mobileTab activeTab">
+                        <h3 class="tl" id="sec1_mTab1_menu"></h3>
+                        <div>
+                            <p class="tl" id="sec1_mTab1_info"></p>
+                        </div>
+                    </div>
+                    <div class="mobileTab">
+                        <h3 class="tl" id="sec1_mTab2_menu"></h3>
+                        <div>
+                            <p class="tl" id="sec1_mTab2_info"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="mobileTab">
-            <h3 class="tl" id="sec1_mTab2_menu"></h3>
-            <div>
-              <p class="tl" id="sec1_mTab2_info">
-                
-              </p>
+        </section>
+
+        <section class="section4 section_news" id="section3">
+            <div class="wrap">
+                <h5
+                    class="tl areaName"
+                    id="sec4_title"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    Project
+                </h5>
+                <div class="border"></div>
+                <p
+                    class="tl subTitle"
+                    id="sec4_subTitle"
+                    data-aos="fade-in"
+                    data-aos-delay="1000"
+                    data-aos-duration="1000"
+                ></p>
+                <div class="border"></div>
+                <div
+                    class="projectInfo"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                >
+                    <div
+                        class="youtubePlayer"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                    >
+                        <!-- <iframe src="https://www.youtube.com/embed/wjv8m1IIXeo?vq=hd720&autoplay=1&version=3&rel=0&enablejsapi=1" frameborder="0" allow="autoplay"></iframe> -->
+                        <iframe
+                            src="https://www.youtube.com/embed/wjv8m1IIXeo?vq=hd720&autoplay=0&version=3&rel=0&enablejsapi=1"
+                            frameborder="0"
+                            allow="autoplay"
+                        ></iframe>
+                    </div>
+                    <p class="tl" id="sec4_projectInfo1"></p>
+                    <p class="tl" id="sec4_projectInfo2"></p>
+                    <p class="tl" id="sec4_projectInfo3"></p>
+                </div>
+                <div class="projectContents">
+                    <div class="projectContentsSection">
+                        <div
+                            class="projectContentsImage"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                        >
+                            <img src="./image/projectImage1.png" />
+                        </div>
+                        <div
+                            class="projectContentsText"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                            data-aos-delay="500"
+                        >
+                            <h5 class="tl" id="sec4_projectContentsTitle1"></h5>
+                            <p class="tl" id="sec4_projectContentsText1"></p>
+                        </div>
+                    </div>
+                    <div class="projectContentsSection odd">
+                        <div
+                            class="projectContentsImage"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <img src="./image/projectImage2.png" />
+                        </div>
+                        <div
+                            class="projectContentsText"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="500"
+                        >
+                            <h5 class="tl" id="sec4_projectContentsTitle2"></h5>
+                            <p class="tl" id="sec4_projectContentsText2"></p>
+                        </div>
+                    </div>
+                    <div class="projectContentsSection">
+                        <div
+                            class="projectContentsImage"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                        >
+                            <img src="./image/projectImage3.png" />
+                        </div>
+                        <div
+                            class="projectContentsText"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                            data-aos-delay="500"
+                        >
+                            <h5 class="tl" id="sec4_projectContentsTitle3"></h5>
+                            <p class="tl" id="sec4_projectContentsText3"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="section4 section_news" id="section3">
-      <div class="wrap">
-        <h5 class="tl areaName" id="sec4_title" data-aos="fade-up" data-aos-duration="1000">Project</h5>
-        <div class="border"></div>
-        <p class="tl subTitle" id="sec4_subTitle" data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000"></p>
-        <div class="border"></div>
-        <div class="projectInfo" data-aos="fade-in" data-aos-duration="1000">
-          <div class="youtubePlayer" data-aos="fade-left" data-aos-duration="1000">
-              <!-- <iframe src="https://www.youtube.com/embed/wjv8m1IIXeo?vq=hd720&autoplay=1&version=3&rel=0&enablejsapi=1" frameborder="0" allow="autoplay"></iframe> -->
-              <iframe src="https://www.youtube.com/embed/wjv8m1IIXeo?vq=hd720&autoplay=0&version=3&rel=0&enablejsapi=1" frameborder="0" allow="autoplay"></iframe>
-          </div>
-          <p class="tl" id="sec4_projectInfo1"></p>
-          <p class="tl" id="sec4_projectInfo2"></p>
-          <p class="tl" id="sec4_projectInfo3"></p>
-        </div>
-        <div class="projectContents">
-          <div class="projectContentsSection">
-            <div class="projectContentsImage" data-aos="fade-right" data-aos-duration="1000"><img src="./image/projectImage1.png"/></div>
-            <div class="projectContentsText" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
-              <h5 class="tl" id="sec4_projectContentsTitle1"></h5>
-              <p class="tl" id="sec4_projectContentsText1"></p>
+        <section class="section3 section_roadmap" id="section4">
+            <div class="wrap">
+                <h5
+                    class="tl areaName"
+                    id="sec3_title"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    Roadmap
+                </h5>
+
+                <div class="roadmap_year">
+                    <h6 class="year completeYear">2019</h6>
+                    <div
+                        class="road completed"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" Mineral id="sec3_2019_1">
+                                2018. 11 GitHub Testnet Release
+                            </p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+                    <div
+                        class="road completed"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2019_2">White Paper</p>
+                        </div>
+                    </div>
+                    <div
+                        class="road completed"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+
+                <div class="roadmap_year">
+                    <h6 class="year completeYear">2020</h6>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" id="sec3_2020_1"></p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2020_2"></p>
+                        </div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" id="sec3_2020_3"></p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2020_4"></p>
+                        </div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" id="sec3_2020_5"></p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2020_6"></p>
+                        </div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" id="sec3_2020_7"></p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2020_8"></p>
+                        </div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left">
+                            <p class="tl" id="sec3_2020_9"></p>
+                        </div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right"></div>
+                    </div>
+                    <div
+                        class="road"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"><div class="circle"></div></div>
+                        <div class="right">
+                            <p class="tl" id="sec3_2020_10"></p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="road lastRoad"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                    >
+                        <div class="left"></div>
+                        <div class="line"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+
+                <p
+                    class="tl comingsoon"
+                    id="sec3_coming"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                >
+                    Detailed schedule TBD
+                </p>
             </div>
-          </div>
-          <div class="projectContentsSection odd">
-            <div class="projectContentsImage" data-aos="fade-left" data-aos-duration="1000"><img src="./image/projectImage2.png"/></div>
-            <div class="projectContentsText" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-              <h5 class="tl" id="sec4_projectContentsTitle2"></h5>
-              <p class="tl" id="sec4_projectContentsText2"></p>
+        </section>
+
+        <section class="section6 section_contact" id="section5">
+            <div class="wrap">
+                <h5
+                    class="tl areaName"
+                    id="sec6_title"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    Contact
+                </h5>
+                <p
+                    class="tl"
+                    id="sec6_contents"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    We are looking for Blockchain business partner in various
+                    field
+                </p>
+                <div class="askBtn goBtn">
+                    <div class="e1"></div>
+                    <div class="e2"></div>
+                    <a class="tl" id="sec6_ask" href="mailto:ceo@mineralhub.org"
+                        >Inquiry →</a
+                    >
+                </div>
             </div>
-          </div>
-          <div class="projectContentsSection">
-            <div class="projectContentsImage" data-aos="fade-right" data-aos-duration="1000"><img src="./image/projectImage3.png"/></div>
-            <div class="projectContentsText" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
-              <h5 class="tl" id="sec4_projectContentsTitle3"></h5>
-              <p class="tl" id="sec4_projectContentsText3"></p>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="logo">
+                    <a href="#" onclick="location.reload();"></a>
+                </div>
+                <p>
+                    <!-- <span class="tl" id="footer_adress">경기도 성남시 분당구 삼평동 판교로 253 이노밸리 A동 5층</span> -->
+                    <!-- <span class="pcLine"> / </span> -->
+                    <!-- <span class="mobileLine"><br></span> -->
+                    <!-- <span>mineralhub@skypeople.co.kr</span> -->
+                </p>
+                <p class="copyright">ALL RIGHTS RESERVED</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </footer>
 
-    <section class="section3 section_roadmap" id="section4">
-      <div class="wrap">
-        <h5 class="tl areaName" id="sec3_title" data-aos="fade-up" data-aos-duration="1000">Roadmap</h5>
-
-        <div class="roadmap_year">
-          <h6 class="year completeYear">2019</h6>
-          <div class="road completed" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"><p class="tl"Mineral id="sec3_2019_1">2018. 11 GitHub Testnet Release</p></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"></div>
-          </div>
-          <div class="road completed" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"><p class="tl" id="sec3_2019_2">White Paper</p></div>
-          </div>
-          <div class="road completed" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"></div>
-            <div class="line"></div>
-            <div class="right"></div>
-          </div>
-        </div>
-
-        <div class="roadmap_year">
-          <h6 class="year completeYear">2020</h6>
-          <div class="road" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"><p class="tl" id="sec3_2020_1"></p></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"></div>
-          </div>
-          <div class="road" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"><p class="tl" id="sec3_2020_2"></p></div>
-          </div>
-          <div class="road" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"><p class="tl" id="sec3_2020_3"></p></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"></div>
-          </div>
-          <div class="road" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"><p class="tl" id="sec3_2020_4"></p></div>
-          </div>
-          <div class="road" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"><p class="tl" id="sec3_2020_5"></p></div>
-            <div class="line"><div class="circle"></div></div>
-            <div class="right"></div>
-          </div>
-          <div class="road lastRoad" data-aos="fade-in" data-aos-duration="1000">
-            <div class="left"></div>
-            <div class="line"></div>
-            <div class="right"></div>
-          </div>
-        </div>
-
-        <p class="tl comingsoon" id="sec3_coming" data-aos="fade-in" data-aos-duration="1000">Detailed schedule TBD</p>
-      </div>
-    </section>
-
-    <section class="section6 section_contact" id="section5">
-      <div class="wrap">
-        <h5 class="tl areaName" id="sec6_title" data-aos="fade-up" data-aos-duration="1000">Contact</h5>
-        <p class="tl" id="sec6_contents" data-aos="fade-up" data-aos-duration="1000">We are looking for Blockchain business partner in various field</p>
-        <div class="askBtn goBtn">
-          <div class="e1"></div>
-          <div class="e2"></div>
-          <a class="tl" id="sec6_ask" href="mailto:ceo@mineralhub.org">Inquiry →</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="wrap">
-        <div class="logo"><a href="#" onclick="location.reload();"></a></div>
-        <p>
-          <!-- <span class="tl" id="footer_adress">경기도 성남시 분당구 삼평동 판교로 253 이노밸리 A동 5층</span> -->
-          <!-- <span class="pcLine"> / </span> -->
-          <!-- <span class="mobileLine"><br></span> -->
-          <!-- <span>mineralhub@skypeople.co.kr</span> -->
-        </p>
-        <p class="copyright">ALL RIGHTS RESERVED</p>
-      </div>
-    </footer>
-
-    <div id="load"><i class="fas fa-circle-notch fa-spin"></i></div>
-  </body>
+        <div id="load"><i class="fas fa-circle-notch fa-spin"></i></div>
+    </body>
 </html>
